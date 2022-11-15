@@ -15,8 +15,8 @@ export default function Navbar() {
       </div>
       <Dropdown
         label={<h3>Programs</h3>}
-        content={["Summer of Innovation"]}
-        links={["#"]}
+        content={["Summer of Innovation", "Community Service"]}
+        links={["#", "#"]}
       />
       <Dropdown
         label={<h3>Media</h3>}
