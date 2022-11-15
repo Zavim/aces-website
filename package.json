@@ -11,8 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^1.2.2",
     "@astrojs/svelte": "^1.0.2",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
     "astro": "^1.5.3",
-    "svelte": "^3.52.0"
+    "lax.js": "^2.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svelte": "^3.53.1"
   }
 }

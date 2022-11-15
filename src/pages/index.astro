@@ -1,27 +1,146 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import volcano from "../images/volcano.jpg";
 ---
 
-<Layout>
-  <main></main>
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <Navbar client:load />
+  <main>
+    <div class="showcase">
+      <img
+        src={volcano}
+        alt="children excited about volcano science experiment"
+      />
+    </div>
+    <div class="blurb">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        commodi. Iusto voluptatibus modi aliquam necessitatibus quisquam
+        reiciendis aliquid fuga eaque voluptate? Incidunt facilis atque pariatur
+        magnam non quas nulla, reiciendis itaque aut velit impedit eligendi
+        culpa totam molestiae natus voluptatem soluta earum? Labore cumque
+        obcaecati veritatis ab id ratione illo doloremque ut aut dolorum
+        voluptatibus,
+      </p>
+    </div>
+    <div class="awards-container">
+      <h1 class="big-heading text-center">
+        Here's What Our Friends Say About Us:
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
+        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
+        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
+        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
+        cupiditate fugiat alias totam quidem enim delectus minus accusantium
+        officiis ea repellat vitae sed placeat aperiam! Exercitationem
+        repudiandae quis voluptates quas beatae ex asperiores nemo officia
+        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
+        tempore nam aliquid
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
+        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
+        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
+        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
+        cupiditate fugiat alias totam quidem enim delectus minus accusantium
+        officiis ea repellat vitae sed placeat aperiam! Exercitationem
+        repudiandae quis voluptates quas beatae ex asperiores nemo officia
+        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
+        tempore nam aliquid
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
+        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
+        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
+        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
+        cupiditate fugiat alias totam quidem enim delectus minus accusantium
+        officiis ea repellat vitae sed placeat aperiam! Exercitationem
+        repudiandae quis voluptates quas beatae ex asperiores nemo officia
+        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
+        tempore nam aliquid
+      </p>
+    </div>
+  </main>
+  <Footer />
+  <style is:global>
+    main {
+    }
+    .flex {
+      display: flex;
+      gap: var(--gap, 1rem);
+    }
+    body {
+      overflow-x: hidden;
+      /* background-color: var(--aces-blue-dark); */
+    }
+    .text-center {
+      text-align: center !important;
+    }
+    .showcase {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      padding: 2rem 20% 2rem;
+      background-color: var(--aces-blue-dark);
+    }
+    .showcase > img {
+      border-radius: 5px;
+      width: 100%;
+    }
+    .blurb {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      /* padding-bottom: 2rem; */
+    }
+    .blurb > p {
+      /* width: 80%; */
+      padding: 2rem 20%;
+      font-size: 1.8rem;
+    }
+    .big-heading {
+      font-size: 2.5rem;
+      padding: 3rem 0 3rem;
+    }
+    .awards-container {
+      padding: 0 20% 2rem;
+      background-color: var(--aces-blue);
+    }
+    .awards-container > p {
+      font-size: 1.4rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: #fff;
+      box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
+    }
 
-<style is:global>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-  }
-  html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-  }
-  main {
-  }
-  .flex {
-    display: flex;
-    gap: var(--gap, 1rem);
-  }
-  body {
-    overflow-x: hidden;
-  }
-</style>
+    @media (max-width: 35em) {
+      .showcase {
+        padding: 0;
+      }
+      .showcase > img {
+        border-radius: 0;
+      }
+      .blurb > p {
+        padding: 2rem 5%;
+      }
+      .awards-container {
+        padding: 0 5% 2rem;
+      }
+    }
+  </style>
+
+
+</html>
