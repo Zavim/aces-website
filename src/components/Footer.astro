@@ -3,18 +3,137 @@ import acesLogoWords from "../images/ACES-logo-transparent.png";
 ---
 
 <footer>
-  <div class="logo-container"><img src={acesLogoWords} alt="" /></div>
+  <div class="logo-container">
+    <img class="logo" src={acesLogoWords} alt="" />
+  </div>
 </footer>
 
 <style>
   footer {
     background-color: var(--aces-blue-dark);
-    height: 30vh;
+    min-height: max-content;
   }
   .logo-container {
     padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .logo-container > img {
+  /* .logo {
     width: 30%;
+  } */
+</style>
+
+<style is:global>
+  :root {
+    --aces-blue: hsl(208, 56%, 45%);
+    --aces-blue-dark: hsl(208, 56%, 25%);
+    --aces-blue-very-dark: hsl(208, 56%, 15%);
+    --aces-blue-black: hsl(208, 56%, 5%);
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: "Average Sans", sans-serif;
+  }
+  .navbar {
+    background-color: var(--aces-blue-dark);
+  }
+  .navbar-logo {
+    width: 10rem;
+  }
+  .home-button {
+    display: none;
+  }
+  .nav-link {
+    padding: 0 50%;
+  }
+  .content {
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .content.open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-height: min-content;
+    width: 11%;
+    /* max-height: 9999px; */
+    text-align: center;
+    /* transform: translateY(0.3125rem); */
+    animation: fadeIn cubic-bezier(0.22, 0.61, 0.36, 1) 2s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    /* margin-top: 12rem; */
+    top: 7rem;
+    transition: all 0.2s ease-out;
+  }
+  .content.open a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  .content.open a:hover {
+    background-color: #bebec5;
+  }
+  /* .navbar {
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 7rem;
+
+    font-size: 1.5rem;
+  }
+  .nav-link-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 10%;
+  }
+  .nav-link-container a {
+    text-decoration: none;
+    color: #bebec5;
+  }
+  .dropdown {
+    height: 100%;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bebec5;
+  }
+  .dropdown:hover {
+    background-color: var(--aces-blue-black);
+  } */
+  .logo {
+    margin: 0.5rem 2rem;
+    width: 30%;
+    /* position: relative; */
+    /* left: -45%; */
+  }
+
+  @media (max-width: 35em) {
+    .navbar-brand {
+      display: none;
+    }
+    .home-button {
+      display: block;
+      width: 4.1em;
+    }
+    .logo {
+      width: 80%;
+    }
   }
 </style>

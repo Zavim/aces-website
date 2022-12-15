@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+import Topbar from "../components/Topbar.jsx";
 import volcano from "../images/volcano.jpg";
 ---
 
@@ -11,7 +11,7 @@ import volcano from "../images/volcano.jpg";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <Navbar client:load />
+  <Topbar client:load />
   <main>
     <div class="showcase">
       <img
@@ -20,11 +20,11 @@ import volcano from "../images/volcano.jpg";
       />
     </div>
     <div class="blurb">
+      <h2 class="heading">ACES Mission Statement</h2>
       <p>
-        ACES mission statement/blurb <br /> Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Perspiciatis, commodi. Iusto voluptatibus modi aliquam
-        necessitatibus quisquam reiciendis aliquid fuga eaque voluptate? Incidunt
-        facilis atque pariatur
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        commodi. Iusto voluptatibus modi aliquam necessitatibus quisquam
+        reiciendis aliquid fuga eaque voluptate? Incidunt facilis atque pariatur
       </p>
     </div>
     <div class="awards-container">
@@ -89,24 +89,29 @@ import volcano from "../images/volcano.jpg";
       align-items: center;
       justify-content: center;
       width: 100vw;
-      padding: 2rem 20% 2rem;
+      /* padding: 2rem 20% 2rem; */
       background-color: var(--aces-blue-dark);
+      overflow-y: hidden;
     }
     .showcase > img {
-      border-radius: 5px;
       width: 100%;
     }
     .blurb {
       background-color: #fff;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       text-align: center;
       /* padding-bottom: 2rem; */
     }
     .blurb > p {
       /* width: 80%; */
-      padding: 2rem 20%;
+      padding: 0 20%;
       font-size: 1.8rem;
+    }
+    .heading {
+      font-size: 1.5rem;
+      padding: 2rem 0 2rem;
     }
     .big-heading {
       font-size: 2.5rem;
@@ -125,12 +130,6 @@ import volcano from "../images/volcano.jpg";
     }
 
     @media (max-width: 35em) {
-      .showcase {
-        padding: 0;
-      }
-      .showcase > img {
-        border-radius: 0;
-      }
       .blurb > p {
         padding: 2rem 5%;
       }
