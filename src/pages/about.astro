@@ -1,98 +1,181 @@
 ---
+import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+
+import jennifer from "/jennifer.png";
+import jessicka from "/jessicka.png";
+import lashane from "/lashane.png";
 ---
 
-<Navbar />
-<main>
-  <div class="blurb">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
-      commodi. Iusto voluptatibus modi aliquam necessitatibus quisquam
-      reiciendis aliquid fuga eaque voluptate? Incidunt facilis atque pariatur
-      magnam non quas nulla, reiciendis itaque aut velit impedit eligendi culpa
-      totam molestiae natus voluptatem soluta earum? Labore cumque obcaecati
-      veritatis ab id ratione illo doloremque ut aut dolorum voluptatibus,
-      accusamus corporis repudiandae non debitis molestias hic deserunt, soluta
-      consequatur dolores commodi. Vitae, ad. Minima, quasi! Nemo error
-      doloribus libero dolores officia officiis velit voluptas praesentium modi
-      beatae repellat magni impedit, laudantium, neque dignissimos adipisci
-      eveniet vitae iusto amet unde. Ullam voluptatem voluptatibus nobis
-      perferendis, quisquam qui consectetur distinctio illum aspernatur quos
-      esse incidunt nulla sunt odit in architecto eius natus maxime repellendus
-      atque facere est? Quasi, nisi odio dolores tenetur consequatur neque
-      explicabo fugiat reprehenderit dicta? Recusandae rem consectetur porro
-      nostrum odio atque. Architecto rem voluptas saepe quos est vel ipsum
-      nesciunt tempora et? Placeat accusamus magni alias, suscipit vitae
-      repellendus porro nemo, consequatur enim modi iste quisquam! Soluta enim
-      libero eveniet laborum. Quam nobis cupiditate esse, beatae iste autem vero
-      eius quisquam molestias fuga, iure nostrum inventore perferendis
-      distinctio ea consequatur velit quasi voluptate omnis ipsam! Quos corporis
-      reiciendis minima id vitae quod a molestiae, consequatur nulla labore
-      reprehenderit et veritatis porro iure praesentium eveniet dolorum ut sit
-      aperiam cum nam quasi! Hic aut consequuntur minima, modi amet possimus.
-      Quisquam eos dignissimos obcaecati eaque in accusantium tempore voluptatum
-      quibusdam. Atque architecto sit saepe doloremque ab aliquam voluptate
-      suscipit inventore a commodi exercitationem sed harum ad fuga esse,
-      laborum, nesciunt magnam facilis autem similique molestias unde? Inventore
-      quisquam nisi sunt ad magnam magni, autem enim non quos consequuntur totam
-      tenetur reiciendis eum, voluptates, distinctio atque deserunt ratione amet
-      exercitationem quis accusantium repudiandae ex delectus. Omnis delectus
-      corrupti nam itaque debitis atque quod! Iure amet laboriosam tempore quia
-      maxime itaque ea modi, aliquam autem dolore eum repellat quidem ex, nisi
-      minus magnam omnis ut distinctio consectetur iste vel! Maiores neque quia,
-      ab veniam, reprehenderit, laborum ratione nihil ea atque doloribus
-      architecto vitae. Odio dolor expedita, optio distinctio ratione quisquam
-      dolore soluta quos sapiente voluptatem tenetur corrupti, aspernatur libero
-      debitis ullam explicabo aliquid? Quaerat harum facilis dignissimos aliquid
-      exercitationem neque quis culpa reprehenderit quae odio eaque sapiente
-      tempore cumque, a sit quos dicta. Similique illum facilis fuga enim
-      corrupti natus quos iure magni est tenetur eum, ducimus nostrum repellat,
-      obcaecati suscipit tempora quasi, quia culpa? Fugit maxime ea temporibus
-      cum in non corrupti, eos, hic perspiciatis aliquam atque a, animi sequi
-      adipisci voluptates laboriosam est quam ad assumenda vitae dolorum eius
-      accusamus alias earum. Hic dolores animi reprehenderit iste, labore minima
-      alias. Deserunt dicta, tempore reiciendis labore ratione facere sed odit
-      id consectetur fugiat. Obcaecati alias deleniti accusamus saepe ipsum
-      maiores ab rerum cumque sit quis, nemo veniam illo unde neque, quo aliquam
-      dolores expedita. Harum fugit ipsam repudiandae aliquam rem maiores
-      eveniet possimus doloremque accusantium numquam quod ipsa repellendus
-      dolores veritatis, labore quisquam dignissimos velit quaerat esse! Ipsa
-      nobis est laborum in odio dolorem a!
-    </p>
-  </div>
-</main>
-<style is:global>
-  main {
-  }
-  .flex {
-    display: flex;
-    gap: var(--gap, 1rem);
-  }
-  body {
-    overflow-x: hidden;
-    background-color: var(--aces-blue-dark);
-  }
-  .showcase {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    padding: 3rem 0 5rem;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <Navbar />
+  <main>
+    <div class="team-container">
+      <div class="member-card">
+        <img class="member-img" src={jessicka} alt="" />
+        <div>
+          <h4>First Last</h4>
+          <span>job title</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <img class="member-img" src={jennifer} alt="" />
+        <div>
+          <h4>First Last</h4>
+          <span>job title</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <img class="member-img" src={lashane} alt="" />
+        <div>
+          <h4>First Last</h4>
+          <span>job title</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <img src="" alt="" />
+        <div>
+          <h4>First Last</h4>
+          <span>job title</span>
+        </div>
+      </div>
+    </div>
+    <div class="blurb">
+      <h2 class="heading">ACES Mission Statement</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        commodi. Iusto voluptatibus modi aliquam necessitatibus quisquam
+        reiciendis aliquid fuga eaque voluptate? Incidunt facilis atque pariatur
+      </p>
+    </div>
+    <div class="awards-container">
+      <h1 class="big-heading text-center">
+        Here's What Our Friends Say About Us:
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
+        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
+        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
+        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
+        cupiditate fugiat alias totam quidem enim delectus minus accusantium
+        officiis ea repellat vitae sed placeat aperiam! Exercitationem
+        repudiandae quis voluptates quas beatae ex asperiores nemo officia
+        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
+        tempore nam aliquid
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
+        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
+        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
+        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
+        cupiditate fugiat alias totam quidem enim delectus minus accusantium
+        officiis ea repellat vitae sed placeat aperiam! Exercitationem
+        repudiandae quis voluptates quas beatae ex asperiores nemo officia
+        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
+        tempore nam aliquid
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
+        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
+        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
+        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
+        cupiditate fugiat alias totam quidem enim delectus minus accusantium
+        officiis ea repellat vitae sed placeat aperiam! Exercitationem
+        repudiandae quis voluptates quas beatae ex asperiores nemo officia
+        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
+        tempore nam aliquid
+      </p>
+    </div>
+    <Footer />
+    <style is:global>
+      main {
+      }
+      .flex {
+        display: flex;
+        gap: var(--gap, 1rem);
+      }
+      body {
+        overflow-x: hidden;
+        /* background-color: var(--aces-blue-dark); */
+      }
+      .text-center {
+        text-align: center !important;
+      }
+      .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90rem;
+      }
+      .member-card {
+        flex: 0 0 33.333%;
+      }
+      .member-img {
+        width: 100%;
+      }
+      .showcase {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        /* padding: 2rem 20% 2rem; */
+        background-color: var(--aces-blue-dark);
+        overflow-y: hidden;
+      }
+      .showcase > img {
+        width: 100%;
+      }
+      .blurb {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        /* padding-bottom: 2rem; */
+      }
+      .blurb > p {
+        /* width: 80%; */
+        padding: 0 20%;
+        font-size: 1.8rem;
+      }
+      .heading {
+        font-size: 1.5rem;
+        padding: 2rem 0 2rem;
+      }
+      .big-heading {
+        font-size: 2.5rem;
+        padding: 3rem 0 3rem;
+      }
+      .awards-container {
+        padding: 0 20% 2rem;
+        background-color: var(--aces-blue);
+      }
+      .awards-container > p {
+        font-size: 1.4rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        background-color: #fff;
+        box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
+      }
 
-    background-color: var(--aces-blue-dark);
-  }
-  .showcase > img {
-    border-radius: 10px;
-    width: 70%;
-  }
-  .blurb {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-  }
-  .blurb > p {
-    width: 80%;
-    padding: 1rem;
-    font-size: 1.5rem;
-  }
-</style>
+      @media (max-width: 35em) {
+        .blurb > p {
+          padding: 2rem 5%;
+        }
+        .awards-container {
+          padding: 0 5% 2rem;
+        }
+      }
+    </style>
+  </main>
+
+
+</html>

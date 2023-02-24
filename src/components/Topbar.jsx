@@ -1,12 +1,12 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import acesLogo from "../images/ACES-logo-transparent-no-words.png";
-import acesStar from "../images/ACES-logo-star.png";
+import acesLogo from "/ACES-logo-transparent-no-words.png";
+// import acesStar from "../images/ACES-logo-star.png";
 
 export default function Topbar() {
   return (
-    <Navbar variant="dark">
+    <Navbar variant="dark" expand="sm">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -18,14 +18,7 @@ export default function Topbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <a href="/">
-              <img
-                className="home-button"
-                src={acesStar}
-                alt="star from ACES logo"
-              />
-            </a>
-            <Nav.Link href="#">About</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             <NavDropdown title="Programs" id="basic-nav-dropdown">
               <NavDropdown.Item href="#">Summer of Innovation</NavDropdown.Item>
               <NavDropdown.Item href="#">Community Service</NavDropdown.Item>
