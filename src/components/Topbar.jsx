@@ -8,7 +8,7 @@ export default function Topbar() {
   return (
     <Navbar variant="dark" expand="sm">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             className="navbar-logo"
             src={acesLogo}

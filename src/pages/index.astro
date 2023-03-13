@@ -2,8 +2,6 @@
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
-
-import volcano from "../images/volcano.jpg";
 ---
 
 <!DOCTYPE html>
@@ -15,20 +13,23 @@ import volcano from "../images/volcano.jpg";
   </head>
   <Navbar />
   <main>
-    <!-- <div class="showcase">
-      <img
-        src={volcano}
-        alt="children excited about volcano science experiment"
-      />
-    </div> -->
     <Slideshow />
-    <div class="blurb">
-      <h2 class="heading">ACES Mission Statement</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
-        commodi. Iusto voluptatibus modi aliquam necessitatibus quisquam
-        reiciendis aliquid fuga eaque voluptate? Incidunt facilis atque pariatur
-      </p>
+    <div class="mission-container">
+      <div class="mission-card">
+        <h1 class="big-heading text-center">Our Mission</h1>
+      </div>
+      <div class="mission-statement">
+        <p>
+          <strong>ACES</strong> (Achievement thru Community Education & Support)
+          is a fun-focused High School mentoring program operated by Mike Ferrer
+          in collaboration with the LCSD, Nordson Corporation & the Community Foundation
+          of Lorain County. ACES works with 9-12th grade LHS/Success Academy students
+          who will be motivated to accept and successfully navigate a series of challenges
+          assisting them in developing inherent skills to overcome barriers hindering
+          educational, social, emotional and career growth. The program runs yearly
+          from July 1st – June 30th.
+        </p>
+      </div>
     </div>
     <div class="awards-container">
       <h1 class="big-heading text-center">
@@ -98,6 +99,20 @@ import volcano from "../images/volcano.jpg";
     }
     .showcase > img {
       width: 100%;
+    }
+    .mission-container {
+      display: flex;
+      height: 33vh;
+    }
+    .mission-card {
+      flex: 0 0 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 1rem;
+      background-color: var(--aces-blue);
+      color: #fff;
     }
     .blurb {
       background-color: #fff;

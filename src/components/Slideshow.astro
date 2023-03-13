@@ -12,7 +12,9 @@ import blackShirts from "/blackShirts.jpeg";
     <style>
       .hidden-slide {
         opacity: 0.2;
-        height: 85vh;
+        width: 100%;
+        height: 100%;
+        /* height: 85vh; */
       }
       img {
         vertical-align: middle;
@@ -21,13 +23,13 @@ import blackShirts from "/blackShirts.jpeg";
         height: 100%;
       }
       .slideshow-container {
-        /* max-width: 80vw; */
-        position: relative;
-        margin: auto;
+        height: 80vh;
       }
       .dots-container {
         text-align: center;
-        padding-top: 1rem;
+        transform: translateY(-2rem);
+        /* padding-top: 1rem; */
+        background-color: transparent;
       }
       /* The dots/bullets/indicators */
       .dot {
@@ -61,6 +63,17 @@ import blackShirts from "/blackShirts.jpeg";
           opacity: 0.2;
         }
       }
+      @media (max-width: 35em) {
+        .slideshow-container {
+          width: 100vw;
+          height: 30vh;
+        }
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -80,13 +93,13 @@ import blackShirts from "/blackShirts.jpeg";
       <div class="hidden-slide fade">
         <img src={blackShirts} />
       </div>
-    </div>
 
-    <div class="dots-container">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
 
     <script>
@@ -94,17 +107,16 @@ import blackShirts from "/blackShirts.jpeg";
       showSlides();
 
       function showSlides() {
-        let i;
         let slides = document.getElementsByClassName("hidden-slide");
         let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
         slideIndex++;
         if (slideIndex > slides.length) {
           slideIndex = 1;
         }
-        for (i = 0; i < dots.length; i++) {
+        for (let i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
@@ -114,5 +126,3 @@ import blackShirts from "/blackShirts.jpeg";
     </script>
   </body>
 </html>
-
-<style></style>
