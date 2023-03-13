@@ -19,57 +19,72 @@ import Footer from "../components/Footer.astro";
         <h1 class="big-heading text-center">Our Mission</h1>
       </div>
       <div class="mission-statement">
-        <p>
-          <strong>ACES</strong> (Achievement thru Community Education & Support)
-          is a fun-focused High School mentoring program operated by Mike Ferrer
-          in collaboration with the LCSD, Nordson Corporation & the Community Foundation
-          of Lorain County. ACES works with 9-12th grade LHS/Success Academy students
-          who will be motivated to accept and successfully navigate a series of challenges
-          assisting them in developing inherent skills to overcome barriers hindering
-          educational, social, emotional and career growth. The program runs yearly
-          from July 1st – June 30th.
+        <p class="blurb">
+          <strong>ACES</strong> (Achievement through Community Education & Support)
+          is a fun-focused high school mentoring program. We help 9th-12th grade
+          Lorain High School/Success Academy students accept and successfully navigate
+          a series of challenges. The students develop inherent skills to overcome
+          barriers hindering educational, social, emotional and career growth. <br
+          />
+          <br /> Our program runs yearly from <strong>
+            July 1st – June 30th</strong
+          >
         </p>
       </div>
     </div>
     <div class="awards-container">
-      <h1 class="big-heading text-center">
-        Here's What Our Friends Say About Us:
-      </h1>
+      <h1 class="big-heading text-center">Our Program</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
-        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
-        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
-        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
-        cupiditate fugiat alias totam quidem enim delectus minus accusantium
-        officiis ea repellat vitae sed placeat aperiam! Exercitationem
-        repudiandae quis voluptates quas beatae ex asperiores nemo officia
-        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
-        tempore nam aliquid
+        As Students complete group and individual challenges and learn to
+        control emotions and behaviors that could ultimately hinder their
+        academic and social progress, they are taught via hands-on, goal
+        oriented, role playing, critical thinking and community service
+        scenarios to implement this new-found control to reach short/long term
+        goals. <br />
+        <br /> The program empowers Students to experiment and adopt behaviors which
+        generate positive results.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
-        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
-        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
-        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
-        cupiditate fugiat alias totam quidem enim delectus minus accusantium
-        officiis ea repellat vitae sed placeat aperiam! Exercitationem
-        repudiandae quis voluptates quas beatae ex asperiores nemo officia
-        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
-        tempore nam aliquid
+        Throughout the program Students will experience their power through the
+        successful completion of challenges that generate rewards and
+        incentives. <br /><br /> Community service challenges will be converted into
+        employment opportunities when OMJ and other organizations arrive at the school
+        in May to interview students for potential employment opportunities. Entrepreneurship
+        skills and positive reinforcement will come through new relationships with
+        businesses and other concerns within the Lorain County. Within a short period
+        of time after experiencing success on several levels, Students will be better
+        motivated to improve/maintain academic performance, attend school regularly,
+        participate in after-school tutoring, avoid behaviors generating negative
+        referrals and suspensions and contemplate a more positive future, realizing
+        that personal progress can be acquired through leadership training, proper
+        mindset, college prep and community service.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
-        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
-        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
-        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
-        cupiditate fugiat alias totam quidem enim delectus minus accusantium
-        officiis ea repellat vitae sed placeat aperiam! Exercitationem
-        repudiandae quis voluptates quas beatae ex asperiores nemo officia
-        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
-        tempore nam aliquid
+        Our goal is to motivate Students to want to meet outside of school for
+        two or more days per week to include fieldtrips for a total of 10 hours
+        each week, rides to/from included (this would be in addition to any in
+        school hours of training requested by the LCSD – currently 5-25 per
+        week). Meeting hours will be after school on Thursdays (2:30pm-5:30pm)
+        at Lorain High School and 11am-4pm on Saturdays which will include
+        community service projects and fieldtrips. Transportation will be
+        provided to all locations where training will take place for those
+        without transportation access. ACES Students will also attend unique
+        fieldtrips, college visits, experience adventures and new opportunities,
+        and will each be provided with new resumes and cover letters that will
+        assist in securing part-time employment in the summer and throughout the
+        following year. Participants will acquire communication, social
+        development, problem solving, leadership and decision-making skills
+        while having fun racing go-carts, swimming, kayaking, archery, bowling
+        and many other activities they will enjoy. The ACES program will provide
+        challenges whose successful completion will lead to informed choices on
+        selecting a future college, preparing for a career and utilizing service
+        learning and other community impact projects to position themselves for
+        future employment success. Students demonstrating progress will also
+        plan and host special events (Café Nights, STEM Camps for 2nd thru 7th
+        graders, festivals, etc.) which will greatly enhance their portfolios
+        and confidence. Participants must continue to improve
+        academically/behaviorally at their school and complete personal
+        obligations at home to remain in the program.
       </p>
     </div>
   </main>
@@ -109,23 +124,20 @@ import Footer from "../components/Footer.astro";
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%;
+      /* height: 19rem; */
+      /* width: 19rem; */
       padding: 0 1rem;
       background-color: var(--aces-blue);
       color: #fff;
     }
-    .blurb {
-      background-color: #fff;
+    .mission-statement {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      /* padding-bottom: 2rem; */
+      align-items: center;
+      background-color: #fff;
     }
-    .blurb > p {
-      /* width: 80%; */
-      padding: 0 20%;
-      font-size: 1.8rem;
+    .blurb {
+      font-size: 1.5rem;
+      padding: 1.5rem;
     }
     .heading {
       font-size: 1.5rem;
@@ -137,7 +149,7 @@ import Footer from "../components/Footer.astro";
     }
     .awards-container {
       padding: 0 20% 2rem;
-      background-color: var(--aces-blue);
+      background-color: #ccc;
     }
     .awards-container > p {
       font-size: 1.4rem;
@@ -148,8 +160,14 @@ import Footer from "../components/Footer.astro";
     }
 
     @media (max-width: 35em) {
-      .blurb > p {
-        padding: 2rem 5%;
+      .mission-container {
+        flex-direction: column;
+        height: auto;
+      }
+      .mission-statement {
+        align-items: center;
+      }
+      .blurb {
       }
       .awards-container {
         padding: 0 5% 2rem;

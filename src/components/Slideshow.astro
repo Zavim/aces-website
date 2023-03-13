@@ -51,7 +51,7 @@ import blackShirts from "/blackShirts.jpeg";
       }
       @keyframes fade {
         0% {
-          opacity: 0.2;
+          opacity: 0.4;
         }
         10% {
           opacity: 1;
@@ -60,7 +60,7 @@ import blackShirts from "/blackShirts.jpeg";
           opacity: 1;
         }
         100% {
-          opacity: 0.2;
+          opacity: 0.4;
         }
       }
       @media (max-width: 35em) {
@@ -68,11 +68,15 @@ import blackShirts from "/blackShirts.jpeg";
           width: 100vw;
           height: 30vh;
         }
-        img {
+        .dot {
+          width: 7.5px;
+          height: 7.5px;
+        }
+        /* img {
           object-fit: contain;
           width: 100%;
           height: 100%;
-        }
+        } */
       }
     </style>
   </head>
@@ -121,7 +125,7 @@ import blackShirts from "/blackShirts.jpeg";
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 8000); // Change image every 2 seconds
+        setTimeout(showSlides, 8000);
       }
     </script>
   </body>
