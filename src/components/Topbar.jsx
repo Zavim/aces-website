@@ -29,6 +29,9 @@ export default function Topbar() {
               <NavDropdown.Item href="#">Newspaper</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#">Donate</Nav.Link>
+            <Nav.Link href="#" className="signup-button">
+              Sign Up!
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

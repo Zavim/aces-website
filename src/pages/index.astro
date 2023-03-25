@@ -2,6 +2,14 @@
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
+
+import paddleBoarding from "/paddleBoarding.jpg";
+import mouseAndCat from "/mouseAndCat.jpg";
+import medals from "/medals.svg";
+import suitcase from "/suitcase.svg";
+import graph from "/graph.svg";
+import partners from "/partners.svg";
+import head from "/head.svg";
 ---
 
 <!DOCTYPE html>
@@ -15,51 +23,106 @@ import Footer from "../components/Footer.astro";
   <main>
     <Slideshow />
     <div class="mission-container">
-      <div class="mission-card">
-        <h1 class="big-heading text-center">Our Mission</h1>
-      </div>
-      <div class="mission-statement">
-        <p class="blurb">
-          <strong>ACES</strong> (Achievement through Community Education & Support)
-          is a fun-focused high school mentoring program. We help 9th-12th grade
-          Lorain High School/Success Academy students accept and successfully navigate
-          a series of challenges. The students develop inherent skills to overcome
-          barriers hindering educational, social, emotional and career growth. <br
-          />
-          <br /> Our program runs yearly from <strong>
-            July 1st – June 30th</strong
-          >
+      <p class="mission-text blurb outline">
+        <strong>ACES</strong> (Achievement through Community Education & Support)
+        is a fun-focused high school mentoring program. <br /><span>
+          We help 9th-12th grade Lorain High School/Success Academy students
+          accept and successfully navigate a series of challenges.
+        </span>
+        <br />
+        <span
+          >The students develop inherent skills to overcome barriers hindering
+          educational, social, emotional and career growth.</span
+        >
+        <br />
+        <br />
+        <strong>Our program runs yearly from July 1st – June 30th</strong>
+      </p>
+    </div>
+
+    <div class="photo-text-container">
+      <div class="text-card">
+        <h2>About the ACES Program</h2>
+        <p>
+          Students will complete group and individual challenges, learning to
+          control emotions and behaviors that could ultimately hinder their
+          academic and social progress. <br />
+
+          <br /> They are taught how to implement this new-found control to reach
+          short/long term goals via hands-on, goal oriented, role playing, critical
+          thinking scenarios and community service.
+          <br />
+
+          <br /> The ACES program empowers students to experiment and adopt behaviors
+          that generate positive results.
         </p>
       </div>
+      <!-- <div class="photo-card-text">
+        <section>
+          <h2>Our Students Are Motivated To:</h2>
+          <ul class="rewards-list">
+            <li>improve/maintain academic performance</li>
+            <li>attend school regularly</li>
+            <li>participate in after-school tutoring</li>
+
+            <li>
+              avoid behaviors that lead to negative <br /> referrals and suspensions
+            </li>
+            <li>contemplate a more positive future</li>
+          </ul>
+        </section>
+      </div> -->
+      <div class="photo-card-container">
+        <img
+          class="photo-card-img"
+          src={paddleBoarding}
+          alt="students paddle boarding on a lake as the sun sets"
+        />
+        <!-- <div class="photo-card"></div> -->
+      </div>
     </div>
-    <div class="awards-container">
-      <h1 class="big-heading text-center">Our Program</h1>
-      <p>
-        As Students complete group and individual challenges and learn to
-        control emotions and behaviors that could ultimately hinder their
-        academic and social progress, they are taught via hands-on, goal
-        oriented, role playing, critical thinking and community service
-        scenarios to implement this new-found control to reach short/long term
-        goals. <br />
-        <br /> The program empowers Students to experiment and adopt behaviors which
-        generate positive results.
-      </p>
-      <p>
-        Throughout the program Students will experience their power through the
-        successful completion of challenges that generate rewards and
-        incentives. <br /><br /> Community service challenges will be converted into
-        employment opportunities when OMJ and other organizations arrive at the school
-        in May to interview students for potential employment opportunities. Entrepreneurship
-        skills and positive reinforcement will come through new relationships with
-        businesses and other concerns within the Lorain County. Within a short period
-        of time after experiencing success on several levels, Students will be better
-        motivated to improve/maintain academic performance, attend school regularly,
-        participate in after-school tutoring, avoid behaviors generating negative
-        referrals and suspensions and contemplate a more positive future, realizing
-        that personal progress can be acquired through leadership training, proper
-        mindset, college prep and community service.
-      </p>
-      <p>
+    <div class="rewards-container">
+      <!-- <h1 class="big-heading text-center">Our Program</h1> -->
+      <div class="rewards-card">
+        <p>
+          Students experience their power through the successful completion of
+          challenges that generate rewards and incentives.
+        </p>
+        <img class="rewards-icon" src={medals} alt="a stack of medals" />
+      </div>
+      <div class="rewards-card">
+        <p>
+          Community service challenges are converted into employment
+          opportunities when organizations like <a
+            href="https://ohiomeansjobs.ohio.gov/home/">Ohio Means Jobs</a
+          > interview students in May.
+        </p>
+        <img class="rewards-icon" src={suitcase} alt="a stack of medals" />
+      </div>
+      <div class="rewards-card">
+        <p>
+          Students form new relationships with Lorain County businesses and grow
+          their entrepreneurship skills through positive reinforcement.
+        </p>
+        <img class="rewards-icon" src={partners} alt="a stack of medals" />
+      </div>
+      <!-- <div class="rewards-card">
+        <img class="" src={graph} alt="a stack of medals" />
+      </div> -->
+      <div class="rewards-card">
+        <p>
+          Students will realize that personal progress can be acquired through
+          leadership training, proper mindset, college prep and community
+          service.
+        </p>
+        <img
+          class="rewards-icon"
+          src={head}
+          alt="a stack of medals"
+          style="color: green;"
+        />
+      </div>
+      <!-- <p>
         Our goal is to motivate Students to want to meet outside of school for
         two or more days per week to include fieldtrips for a total of 10 hours
         each week, rides to/from included (this would be in addition to any in
@@ -85,7 +148,32 @@ import Footer from "../components/Footer.astro";
         and confidence. Participants must continue to improve
         academically/behaviorally at their school and complete personal
         obligations at home to remain in the program.
-      </p>
+      </p> -->
+    </div>
+
+    <div class="signup-photo-text-container">
+      <div class="signup-photo-card-container">
+        <img
+          class="photo-card-img"
+          src={mouseAndCat}
+          alt="children in front of two people costumed, one as a cat and the other, a mouse"
+        />
+      </div>
+      <div class="motivated-text blurb outline">
+        <div>
+          <h2>Our Students Are Motivated To:</h2>
+          <ul class="rewards-list">
+            <li>Improve/maintain academic performance</li>
+            <li>Attend school regularly</li>
+            <li>Participate in after-school tutoring</li>
+            <li>
+              Avoid behaviors that lead to negative referrals and suspensions
+            </li>
+            <li>Contemplate a more positive future</li>
+          </ul>
+        </div>
+        <div><button>Sign Up!</button></div>
+      </div>
     </div>
   </main>
   <Footer />
@@ -98,7 +186,8 @@ import Footer from "../components/Footer.astro";
     }
     body {
       overflow-x: hidden;
-      /* background-color: var(--aces-blue-dark); */
+      background-color: var(--aces-blue);
+      background-color: #eee;
     }
     .text-center {
       text-align: center !important;
@@ -115,29 +204,35 @@ import Footer from "../components/Footer.astro";
     .showcase > img {
       width: 100%;
     }
-    .mission-container {
-      display: flex;
-      height: 33vh;
+    .outline {
+      border: 2px solid var(--aces-blue-light);
+      /* border-color: var(--aces-blue); */
     }
-    .mission-card {
+    .mission-container {
+      /* align-items: center; */
+      /* background-color: #eee; */
+      /* background-color: var(--aces-blue); */
+    }
+    .mission-text {
+      text-align: center;
+      padding: 2rem 0;
+      margin: 2rem 5%;
+      /* background-color: #fff; */
+      border-radius: 40px;
+
+      /* width: 90%; */
+    }
+    /* .mission-card {
       flex: 0 0 25%;
       display: flex;
       align-items: center;
       justify-content: center;
-      /* height: 19rem; */
-      /* width: 19rem; */
       padding: 0 1rem;
       background-color: var(--aces-blue);
       color: #fff;
-    }
-    .mission-statement {
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-    }
+    } */
     .blurb {
       font-size: 1.5rem;
-      padding: 1.5rem;
     }
     .heading {
       font-size: 1.5rem;
@@ -147,16 +242,131 @@ import Footer from "../components/Footer.astro";
       font-size: 2.5rem;
       padding: 3rem 0 3rem;
     }
-    .awards-container {
-      padding: 0 20% 2rem;
-      background-color: #ccc;
+    .photo-text-container {
+      display: flex;
+      margin: 3rem 5% 5rem;
+      justify-content: space-between;
+      /* background-color: var(--aces-blue); */
+      height: 525px;
     }
-    .awards-container > p {
-      font-size: 1.4rem;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
+    .photo-text-container > *,
+    .signup-photo-text-container > * {
+      border-radius: 40px;
+    }
+    .text-card {
+      display: flex;
+      flex: 1 0 20%;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+      text-align: left;
+      margin-right: 2rem;
+      /* padding: 1.5rem; */
+      /* background-color: #fff; */
+      color: #000;
+    }
+    .text-card > h2 {
+      padding-bottom: 1.5rem;
+    }
+    .text-card > p {
+      font-size: 1.5rem;
+    }
+    .photo-card-container {
+      /* flex: 0 0 49%; */
+      overflow: hidden;
+      box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
+      /* background-position: center;
+      background-size: cover; */
+    }
+    .photo-card {
+      display: block;
+      overflow: hidden;
+      /* position: relative; */
+      width: 100%;
+      height: 100%;
+      background: url("/paddleBoarding.jpg");
+      vertical-align: middle;
+      object-fit: cover;
+
+      /* object-position: 50% 80%; */
+    }
+    .photo-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* object-position: 50% 65%; */
+    }
+    .photo-card-text {
       background-color: #fff;
-      box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
+      height: 100%;
+      padding: 1.5rem;
+      margin-right: 2rem;
+      flex: 1 0 20%;
+      text-align: center;
+    }
+    h5 {
+      color: var(--aces-blue-dark);
+    }
+    .rewards-list {
+      font-size: 1.5rem;
+      padding: 1rem 0 0;
+      list-style: none;
+      margin-bottom: 0;
+    }
+    li {
+      padding: 0.5rem 0;
+    }
+    .rewards-container {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem 0;
+      /* margin: 0 5%; */
+      /* background-color: #ccc; */
+      /* background-color: var(--aces-blue); */
+    }
+    .rewards-card {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 19%;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
+    }
+    .rewards-icon {
+      padding-top: 2rem;
+    }
+    .motivated-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      /* text-align: center; */
+      padding: 2rem 3rem;
+      /* margin: 0 5% 3rem; */
+      /* background-color: #fff; */
+      border-radius: 40px;
+
+      /* width: 90%; */
+    }
+    .signup-photo-text-container {
+      display: flex;
+      margin: 3rem 5% 5rem;
+      justify-content: space-between;
+      /* background-color: var(--aces-blue); */
+      height: 600px;
+    }
+    .signup-photo-card-container {
+      flex: 0 0 63%;
+      overflow: hidden;
+      box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
+      margin-right: 2rem;
+      /* background-position: center;
+      background-size: cover; */
     }
 
     @media (max-width: 35em) {
@@ -169,7 +379,11 @@ import Footer from "../components/Footer.astro";
       }
       .blurb {
       }
-      .awards-container {
+      .photo-text-container {
+        flex-direction: column;
+      }
+      .rewards-container {
+        flex-direction: column;
         padding: 0 5% 2rem;
       }
     }
