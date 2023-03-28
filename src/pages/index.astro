@@ -82,8 +82,10 @@ import head from "/head.svg";
       </div>
     </div>
     <div class="rewards-container">
-      <!-- <h1 class="big-heading text-center">Our Program</h1> -->
       <div class="rewards-card">
+        <!-- <div class="rewards-curtain">
+          <img class="rewards-icon" src={medals} alt="a stack of medals" />
+        </div> -->
         <p>
           Students experience their power through the successful completion of
           challenges that generate rewards and incentives.
@@ -93,7 +95,7 @@ import head from "/head.svg";
       <div class="rewards-card">
         <p>
           Community service challenges are converted into employment
-          opportunities when organizations like <a
+          opportunities when organizations like <br /><a
             href="https://ohiomeansjobs.ohio.gov/home/">Ohio Means Jobs</a
           > interview students in May.
         </p>
@@ -106,9 +108,6 @@ import head from "/head.svg";
         </p>
         <img class="rewards-icon" src={partners} alt="a stack of medals" />
       </div>
-      <!-- <div class="rewards-card">
-        <img class="" src={graph} alt="a stack of medals" />
-      </div> -->
       <div class="rewards-card">
         <p>
           Students will realize that personal progress can be acquired through
@@ -161,7 +160,7 @@ import head from "/head.svg";
       </div>
       <div class="motivated-text blurb outline">
         <div>
-          <h2>Our Students Are Motivated To:</h2>
+          <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
           <ul class="rewards-list">
             <li>Improve/maintain academic performance</li>
             <li>Attend school regularly</li>
@@ -172,7 +171,7 @@ import head from "/head.svg";
             <li>Contemplate a more positive future</li>
           </ul>
         </div>
-        <div><button>Sign Up!</button></div>
+        <div><button class="signup">Sign Up!</button></div>
       </div>
     </div>
   </main>
@@ -260,7 +259,7 @@ import head from "/head.svg";
       /* align-items: center; */
       justify-content: center;
       text-align: left;
-      margin-right: 2rem;
+      margin-right: 5rem;
       /* padding: 1.5rem; */
       /* background-color: #fff; */
       color: #000;
@@ -334,8 +333,16 @@ import head from "/head.svg";
       font-size: 1.2rem;
       padding: 1.5rem;
       border-radius: 10px;
+      overflow: hidden;
       background-color: #fff;
       box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
+    }
+    .rewards-curtain {
+      position: relative;
+      z-index: 3;
+      background-color: var(--aces-blue-dark);
+      width: 100%;
+      height: 100%;
     }
     .rewards-icon {
       padding-top: 2rem;
@@ -343,7 +350,7 @@ import head from "/head.svg";
     .motivated-text {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       /* text-align: center; */
       padding: 2rem 3rem;
@@ -361,30 +368,86 @@ import head from "/head.svg";
       height: 600px;
     }
     .signup-photo-card-container {
-      flex: 0 0 63%;
+      flex: 0 0 60%;
       overflow: hidden;
       box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
       margin-right: 2rem;
       /* background-position: center;
       background-size: cover; */
     }
+    .signup {
+      border: none;
+      border-radius: 40px;
+      color: #fff;
+      background-color: var(--aces-blue);
+      padding: 1rem 2rem;
+      box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
+    }
+    .signup:hover {
+      background-color: var(--aces-blue-dark);
+      transform: translateY(5px);
+      box-shadow: none;
+      transition: 0.1s transform ease-in;
+    }
 
     @media (max-width: 35em) {
       .mission-container {
+        padding: 1rem 1.2rem;
         flex-direction: column;
         height: auto;
       }
-      .mission-statement {
-        align-items: center;
+      .mission-text {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 1.5rem;
       }
       .blurb {
       }
       .photo-text-container {
         flex-direction: column;
+        height: auto;
+        margin-bottom: 3rem;
+      }
+      .text-card {
+        padding: 0 1rem 3rem;
+        text-align: center;
+        margin: 0;
+      }
+      .text-card > p {
+        font-size: 1.2rem;
       }
       .rewards-container {
+        padding: 0;
         flex-direction: column;
-        padding: 0 5% 2rem;
+        margin: 2rem 5%;
+        align-items: stretch;
+        height: 160vh;
+        /* justify-content: space-between; */
+      }
+      .rewards-card {
+        flex: 1;
+        margin: 0.5rem 1.2rem;
+        /* margin: 1rem 0; */
+      }
+      .rewards-icon {
+        padding: 0;
+      }
+      .signup-photo-text-container {
+        flex-direction: column;
+        height: auto;
+      }
+      .signup-photo-card-container {
+        margin: 0 0 3rem;
+      }
+      .motivated-text {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+      }
+      .motivated-header {
+        text-align: center;
+      }
+      .rewards-list {
+        font-size: 1.2rem;
       }
     }
   </style>
