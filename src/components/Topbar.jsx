@@ -18,8 +18,9 @@ export default function Topbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/about">About</Nav.Link>
-            <NavDropdown title="Programs" id="basic-nav-dropdown">
+            {/* <Nav.Link href="/about">About</Nav.Link> */}
+            <NavDropdown title="About Us" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/about">Our Team</NavDropdown.Item>
               <NavDropdown.Item href="#">Summer of Innovation</NavDropdown.Item>
               <NavDropdown.Item href="#">Community Service</NavDropdown.Item>
             </NavDropdown>

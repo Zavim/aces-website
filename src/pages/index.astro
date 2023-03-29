@@ -191,18 +191,6 @@ import head from "/head.svg";
     .text-center {
       text-align: center !important;
     }
-    .showcase {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100vw;
-      /* padding: 2rem 20% 2rem; */
-      background-color: var(--aces-blue-dark);
-      overflow-y: hidden;
-    }
-    .showcase > img {
-      width: 100%;
-    }
     .outline {
       border: 2px solid var(--aces-blue-light);
       /* border-color: var(--aces-blue); */
@@ -243,7 +231,7 @@ import head from "/head.svg";
     }
     .photo-text-container {
       display: flex;
-      margin: 3rem 5% 5rem;
+      margin: 5rem 5% 5rem;
       justify-content: space-between;
       /* background-color: var(--aces-blue); */
       height: 525px;
@@ -254,7 +242,7 @@ import head from "/head.svg";
     }
     .text-card {
       display: flex;
-      flex: 1 0 20%;
+      flex: 1 0 45%;
       flex-direction: column;
       /* align-items: center; */
       justify-content: center;
@@ -317,6 +305,7 @@ import head from "/head.svg";
     }
     .rewards-container {
       display: flex;
+      /* flex-wrap: wrap; */
       justify-content: space-evenly;
       padding: 2rem 0;
       /* margin: 0 5%; */
@@ -325,8 +314,11 @@ import head from "/head.svg";
     }
     .rewards-card {
       display: flex;
+      flex: 0 1 20%;
       flex-direction: column;
-      flex: 0 0 19%;
+      width: 333px;
+      min-height: 300px;
+      /* flex: 0 0 19%; */
       align-items: center;
       justify-content: space-around;
       text-align: center;
@@ -362,10 +354,10 @@ import head from "/head.svg";
     }
     .signup-photo-text-container {
       display: flex;
-      margin: 3rem 5% 5rem;
+      margin: 3rem 7.5% 5rem;
       justify-content: space-between;
       /* background-color: var(--aces-blue); */
-      height: 600px;
+      height: fit-content;
     }
     .signup-photo-card-container {
       flex: 0 0 60%;
@@ -381,6 +373,7 @@ import head from "/head.svg";
       color: #fff;
       background-color: var(--aces-blue);
       padding: 1rem 2rem;
+      margin: 1rem 0;
       box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
     }
     .signup:hover {
@@ -388,6 +381,54 @@ import head from "/head.svg";
       transform: translateY(5px);
       box-shadow: none;
       transition: 0.1s transform ease-in;
+    }
+
+    @media (max-width: 64em) {
+      .mission-text {
+        /* font-size: 1.2rem; */
+        /* margin: 0; */
+        padding: 1.5rem;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: fit-content; */
+        height: 48rem;
+        margin-bottom: 4rem;
+      }
+      .text-card {
+        /* display: block; */
+        flex: 0 0 10%;
+        margin: 0;
+      }
+      .photo-card-container {
+        margin-top: 3rem;
+        flex: 0 0 40%;
+      }
+      .rewards-container {
+        flex-wrap: wrap;
+        padding: 0 0 2rem;
+      }
+      .rewards-card {
+        flex: 0 0 40%;
+        margin-bottom: 2rem;
+      }
+      /* .photo-card-container,
+      .photo-card-img {
+        height: 50%;
+      } */
+      .signup-photo-text-container {
+        margin: 0 5% 3rem;
+        flex-direction: column;
+        height: 55rem;
+      }
+      .signup-photo-card-container {
+        margin: 0 0 2rem;
+        flex: 0 0 40%;
+      }
+      .rewards-list {
+        padding-bottom: 1rem;
+      }
     }
 
     @media (max-width: 35em) {
@@ -416,17 +457,22 @@ import head from "/head.svg";
       .text-card > p {
         font-size: 1.2rem;
       }
+      .photo-card-container {
+        margin: 0;
+      }
       .rewards-container {
         padding: 0;
         flex-direction: column;
+        flex-wrap: nowrap;
         margin: 2rem 5%;
-        align-items: stretch;
-        height: 160vh;
+        /* align-items: stretch; */
+        /* height: 160vh; */
+        height: 81.25rem;
         /* justify-content: space-between; */
       }
       .rewards-card {
-        flex: 1;
-        margin: 0.5rem 1.2rem;
+        flex: 0 1;
+        /* margin: 0.5rem 1.2rem; */
         /* margin: 1rem 0; */
       }
       .rewards-icon {
