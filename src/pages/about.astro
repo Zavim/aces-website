@@ -17,48 +17,79 @@ import michael from "/michael.png";
   </head>
   <Navbar />
   <main>
-    <div class="team-container">
-      <h2 class="team-header">Meet Our Team</h2>
+    <div class="soi-container" id="soi">
+      <h2 class="heading text-center">Summer of Innovation Youth Camps</h2>
+      <p class="mission-text blurb outline">
+        During the summer of 2023 ACES and The Lorain Cooperative Ministry (9
+        area churches) in collaboration with NASA and other service providers
+        will host a Summer of Innovation (SOI) for Lorain County Youth in grades
+        2nd – 7th during the period June 19 – August 10, 2023. <br /> The SOI program
+        will be presented as eight (8) separate four (4) days per week (Mondays thru
+        Thursdays) STE(A)M (Science, Technology, Engineering (Arts) and Math) focused
+        journeys with each Thursday serving as a Music, Arts, or game day. Most activities
+        will take place primarily at Greater Victory Church located at 559 Reid Avenue
+        in Lorain. <br /> All camps will run from 11:00am - 3:00pm on Monday through
+        Thursday (kids can be dropped off starting at 10:30am). Parents are responsible
+        for transportation to and from the program daily unless permission has been
+        provided for the child to walk to and from the program each day. Lunch and
+        snacks will be provided daily at no cost to students or parents.
+      </p>
+      <p class="mission-text blurb outline">
+        It is important that you only mark the weekly camps that your child WILL
+        ATTEND. If you sign up for a given week and your child cannot attend
+        that week you must call us at 440-654-8018, or we will assume your child
+        is out for the remainder of the summer. Depending on availability, we
+        will be attending movies and probably be swimming at Maude Nieding Park
+        pool (if allowable) one day per week beginning with week 2. If we are
+        allowed to swim your child will need to bring a bathing suit and towel
+        on that day (hopefully Wednesdays) each week (also they must still wear
+        gym shoes).
+      </p>
+      <p class="mission-text blurb outline">
+        ACES and our collaborating partners intend to provide STE(A)M focused,
+        exciting summer adventures to youth in 2nd - 7th grade and hope you are
+        able to join us for this year’s FREE Summer of Innovation. Please call
+        Mike Ferrer at 440-336-1501 if you have questions about our safety
+        measures. We intend to continue masking while indoors, social
+        distancing, engage in extensive hand washing, cleaning and disinfection
+        of the facility on a daily basis.
+      </p>
+    </div>
+    <div class="team-container" id="team">
+      <h2 class="heading text-center">Meet the ACES Team</h2>
       <div class="team-cards-container">
         <div class="member-card">
           <img class="member-img" src={michael} alt="" />
-          <div>
+          <div class="member-nametag">
             <h4>Michael Ferrer</h4>
             <span>Director</span>
           </div>
         </div>
         <div class="member-card">
           <img class="member-img" src={jessicka} alt="" />
-          <div>
+          <div class="member-nametag">
             <h4>Jessicka Castro</h4>
             <span>Associate Director <br /> Lead Facilitator</span>
           </div>
         </div>
         <div class="member-card">
           <img class="member-img" src={jennifer} alt="" />
-          <div>
+          <div class="member-nametag">
             <h4>Jennifer Sanabria</h4>
-            <span>Mentor/Facilitator</span>
+            <span>Mentor <br /> Facilitator</span>
           </div>
         </div>
         <div class="member-card">
           <img class="member-img" src={lashane} alt="" />
-          <div>
+          <div class="member-nametag">
             <h4>Lashane Hughley</h4>
-            <span>Mentor/Facilitator</span>
+            <span>Mentor <br /> Facilitator</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="blurb">
-      <h2 class="heading">ACES Mission Statement</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
-        commodi. Iusto voluptatibus modi aliquam necessitatibus quisquam
-        reiciendis aliquid fuga eaque voluptate? Incidunt facilis atque pariatur
-      </p>
-    </div>
-    <div class="awards-container">
+
+    <!-- <div class="awards-container">
       <h1 class="big-heading text-center">
         Here's What Our Friends Say About Us:
       </h1>
@@ -98,7 +129,7 @@ import michael from "/michael.png";
         obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
         tempore nam aliquid
       </p>
-    </div>
+    </div> -->
     <Footer />
     <style is:global>
       main {
@@ -109,35 +140,74 @@ import michael from "/michael.png";
       }
       body {
         overflow-x: hidden;
-        /* background-color: var(--aces-blue-dark); */
+        background-color: #eee;
       }
       .text-center {
         text-align: center !important;
       }
-      .team-container {
-        margin-top: 2rem;
-        max-width: 90rem;
-        margin-left: auto;
-        margin-right: auto;
+      .outline {
+        border: 2px solid var(--aces-blue-light);
+        /* border-color: var(--aces-blue); */
+      }
+      .soi-container {
+        padding-top: 2rem;
+      }
+      .mission-text {
+        text-align: center;
+        padding: 2rem 1rem;
+        margin: 2rem 5%;
+        /* background-color: #fff; */
+        border-radius: 40px;
+
+        /* width: 90%; */
+      }
+      .blurb {
+        /* background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center; */
+        /* padding-bottom: 2rem; */
+        font-size: 1.5rem;
+      }
+      .blurb > p {
+        /* width: 80%; */
+        /* padding: 0 20%; */
       }
       .team-header {
         font-size: 4rem;
         padding-left: 1rem;
       }
+      .team-container {
+        margin: 2rem auto 4rem;
+        max-width: 90rem;
+      }
       .team-cards-container {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
         padding-top: 2rem;
+        margin: 0 1rem;
       }
       .member-card {
-        flex: 1 0 25%;
-        padding: 0 1rem;
+        flex: 0 1 22%;
+        width: 310px;
+        /* min-height: 445px; */
+        border: 2px solid var(--aces-blue-light);
+        border-radius: 40px;
+        overflow: hidden;
+        background-color: #fff;
       }
       .member-img {
         width: 100%;
-        margin-bottom: 1.5rem;
-        border-radius: 40px;
-        box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
+        /* margin-bottom: 1.5rem; */
+        /* box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1); */
+      }
+      .member-nametag {
+        text-align: center;
+        padding: 7% 5%;
+      }
+      span {
+        font-size: 1.2rem;
       }
       .showcase {
         display: flex;
@@ -151,22 +221,10 @@ import michael from "/michael.png";
       .showcase > img {
         width: 100%;
       }
-      .blurb {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        /* padding-bottom: 2rem; */
-      }
-      .blurb > p {
-        /* width: 80%; */
-        padding: 0 20%;
-        font-size: 1.8rem;
-      }
       .heading {
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding: 2rem 0 2rem;
+        margin: 0;
       }
       .big-heading {
         font-size: 2.5rem;
@@ -184,6 +242,21 @@ import michael from "/michael.png";
         box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
       }
 
+      @media (max-width: 64em) {
+        .team-cards-container {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin: 0 5%;
+        }
+        .member-card {
+          flex: 0 1 40%;
+          margin-bottom: 2rem;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+
       @media (max-width: 35em) {
         .team-header {
           padding: 0;
@@ -191,10 +264,14 @@ import michael from "/michael.png";
           font-size: 3rem;
         }
         .team-cards-container {
-          margin: 0 1.25rem;
+          flex-wrap: nowrap;
+          flex-direction: column;
+          align-items: center;
+          /* margin: 0 1.25rem; */
         }
         .member-card {
-          padding-bottom: 2rem;
+          /* flex: 0 1; */
+          /* padding-bottom: 2rem; */
         }
         /* .jessicka-dash {
           display: none;

@@ -20,9 +20,13 @@ export default function Topbar() {
           <Nav className="me-auto">
             {/* <Nav.Link href="/about">About</Nav.Link> */}
             <NavDropdown title="About Us" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/about">Our Team</NavDropdown.Item>
-              <NavDropdown.Item href="#">Summer of Innovation</NavDropdown.Item>
-              <NavDropdown.Item href="#">Community Service</NavDropdown.Item>
+              <NavDropdown.Item href="/about#soi">
+                Summer of Innovation
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/about">
+                Community Service
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/about#team">Our Team</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Media" id="basic-nav-dropdown">
               <NavDropdown.Item href="#">Videos</NavDropdown.Item>
