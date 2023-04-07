@@ -9,6 +9,8 @@ import michael from "/michael.png";
 import pool from "/pool.jpg";
 import coke from "/cokeBottle.jpg";
 import largeGroup from "/largeGroup.jpg";
+import dropdown from "/dropdown.svg";
+import MoreInfo from "../components/MoreInfo";
 ---
 
 <!DOCTYPE html>
@@ -30,35 +32,10 @@ import largeGroup from "/largeGroup.jpg";
             alt="two kids behind a bottle of coke furiously spurting from the top due to the reaction between Coke and Mentos"
           />
         </div>
-        <div class="motivated-text blurb outline">
-          <p class="">
-            ACES and The Lorain Cooperative Ministry, in collaboration with NASA
-            and other service providers, will host a Summer of Innovation for
-            Lorain County youth, grades 2nd – 7th.<br /><br />
-            The Summer of Innovation is eight (8) weeks, four (4) days per week,
-            of <strong>STE(A)M</strong> (<strong>S</strong>cience, <strong
-              >T</strong
-            >echnology, <strong>E</strong>ngineering [<strong>A</strong>rts] and <strong
-              >M</strong
-            >ath) focused journeys. Every Thursday serves as a Music, Arts, or
-            game day.
-            <br /><br />
-            Most activities will take place primarily at <strong
-              >Greater Victory Church located at 559 Reid Avenue in Lorain.</strong
-            >
-            <br /> All camps will run from 11:00am - 3:00pm Monday through Thursday
-            (kids can be dropped off starting at 10:30am). <br /><br /> Parents are
-            responsible for transportation to and from the program daily unless permission
-            has been provided for the child to walk to and from the program each
-            day. Lunch and snacks will be provided daily at no cost to students or
-            parents.
-            <br /><br />
-            <strong>This program runs from June 19 – August 10, 2023</strong>
-            <!-- <p>More Information</p> -->
-          </p>
-        </div>
+        <MoreInfo client:visible />
       </div>
-      <!-- <p class="mission-text blurb outline">
+    </div>
+    <!-- <p class="mission-text blurb outline">
         ACES and The Lorain Cooperative Ministry, in collaboration with NASA and
         other service providers, will host a Summer of Innovation (SOI) for
         Lorain County Youth, grades 2nd – 7th.<br /> The SOI program is from June
@@ -73,401 +50,413 @@ import largeGroup from "/largeGroup.jpg";
         the program each day. Lunch and snacks will be provided daily at no cost
         to students or parents.
       </p> -->
-      <div class="info-container">
-        <div class="motivated-text blurb outline">
-          <p>
-            It is important that you only mark the weekly camps that your child
-            WILL ATTEND. If you sign up for a given week and your child cannot
-            attend that week you must call us at 440-654-8018, or we will assume
-            your child is out for the remainder of the summer. Depending on
-            availability, we will be attending movies and probably be swimming
-            at Maude Nieding Park pool (if allowable) one day per week beginning
-            with week 2. If we are allowed to swim your child will need to bring
-            a bathing suit and towel on that day (hopefully Wednesdays) each
-            week (also they must still wear gym shoes).
-          </p>
+    <!-- <div class="info-container">
+      <div class="motivated-text blurb outline">
+        <p>
+          It is important that you only mark the weekly camps that your child
+          WILL ATTEND. If you sign up for a given week and your child cannot
+          attend that week you must call us at 440-654-8018, or we will assume
+          your child is out for the remainder of the summer. Depending on
+          availability, we will be attending movies and probably be swimming at
+          Maude Nieding Park pool (if allowable) one day per week beginning with
+          week 2. If we are allowed to swim your child will need to bring a
+          bathing suit and towel on that day (hopefully Wednesdays) each week
+          (also they must still wear gym shoes).
+        </p>
 
-          <p>
-            ACES and our collaborating partners intend to provide STE(A)M
-            focused, exciting summer adventures to youth in 2nd - 7th grade and
-            hope you are able to join us for this year’s FREE Summer of
-            Innovation. Please call Mike Ferrer at 440-336-1501 if you have
-            questions about our safety measures. We intend to continue masking
-            while indoors, social distancing, engage in extensive hand washing,
-            cleaning and disinfection of the facility on a daily basis.
-          </p>
-        </div>
+        <p>
+          ACES and our collaborating partners intend to provide STE(A)M focused,
+          exciting summer adventures to youth in 2nd - 7th grade and hope you
+          are able to join us for this year’s FREE Summer of Innovation. Please
+          call Mike Ferrer at 440-336-1501 if you have questions about our
+          safety measures. We intend to continue masking while indoors, social
+          distancing, engage in extensive hand washing, cleaning and
+          disinfection of the facility on a daily basis.
+        </p>
       </div>
-      <div class="team-container" id="team">
-        <h2 class="heading text-center">Meet the ACES Team</h2>
-        <div class="team-cards-container">
-          <div class="member-card">
-            <img class="member-img" src={michael} alt="" />
-            <div class="member-nametag">
-              <h4>Michael Ferrer</h4>
-              <span>Director</span>
-            </div>
-          </div>
-          <div class="member-card">
-            <img class="member-img" src={jessicka} alt="" />
-            <div class="member-nametag">
-              <h4>Jessicka Castro</h4>
-              <span>Associate Director <br /> Lead Facilitator</span>
-            </div>
-          </div>
-          <div class="member-card">
-            <img class="member-img" src={jennifer} alt="" />
-            <div class="member-nametag">
-              <h4>Jennifer Sanabria</h4>
-              <span>Mentor <br /> Facilitator</span>
-            </div>
-          </div>
-          <div class="member-card">
-            <img class="member-img" src={lashane} alt="" />
-            <div class="member-nametag">
-              <h4>Lashane Hughley</h4>
-              <span>Mentor <br /> Facilitator</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="awards-container">
-      <h1 class="big-heading text-center">
-        Here's What Our Friends Say About Us:
-      </h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
-        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
-        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
-        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
-        cupiditate fugiat alias totam quidem enim delectus minus accusantium
-        officiis ea repellat vitae sed placeat aperiam! Exercitationem
-        repudiandae quis voluptates quas beatae ex asperiores nemo officia
-        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
-        tempore nam aliquid
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
-        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
-        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
-        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
-        cupiditate fugiat alias totam quidem enim delectus minus accusantium
-        officiis ea repellat vitae sed placeat aperiam! Exercitationem
-        repudiandae quis voluptates quas beatae ex asperiores nemo officia
-        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
-        tempore nam aliquid
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        commodi dicta molestias, ex laboriosam nihil iure molestiae amet at,
-        repellat aspernatur illum facere. Doloremque explicabo veritatis nostrum
-        eius. Fugit, totam. Laboriosam mollitia necessitatibus, aut itaque
-        veniam voluptatibus ipsum. Cumque at voluptate nulla fugit error,
-        cupiditate fugiat alias totam quidem enim delectus minus accusantium
-        officiis ea repellat vitae sed placeat aperiam! Exercitationem
-        repudiandae quis voluptates quas beatae ex asperiores nemo officia
-        obcaecati praesentium itaque ut rerum commodi est in iusto, laudantium
-        tempore nam aliquid
-      </p>
     </div> -->
-      <Footer />
-      <style is:global>
-        main {
-        }
-        .flex {
-          display: flex;
-          gap: var(--gap, 1rem);
-        }
-        body {
-          overflow-x: hidden;
-          background-color: #eee;
-        }
-        .text-center {
-          text-align: center !important;
-        }
-        .heading {
-          font-size: 2rem;
-          padding-bottom: 2rem;
-          margin: 0;
-        }
-        .outline {
-          border: 2px solid var(--aces-blue-light);
-        }
-        .blurb {
-          font-size: 1.5rem;
-        }
-        .soi-container {
-          padding-top: 2rem;
-        }
-        .mission-text {
-          text-align: center;
-          padding: 2rem 1rem;
-          margin: 2rem 5%;
-          /* background-color: #fff; */
-          border-radius: 40px;
-
-          /* width: 90%; */
-        }
-        .photo-text-container {
-          display: flex;
-          margin: 0 5% 5rem;
-          justify-content: space-between;
-          height: auto;
-        }
-        .text-card {
-          display: flex;
-          flex: 1 0 45%;
-          flex-direction: column;
-          /* align-items: center; */
-          justify-content: center;
-          text-align: left;
-          margin-right: 5rem;
-          /* padding: 1.5rem; */
-          /* background-color: #fff; */
-          color: #000;
-        }
-        .photo-card-container {
-          flex: 0 0 50%;
-          margin-right: 2rem;
-          overflow: hidden;
-          box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
-          /* background-position: center;
-      background-size: cover; */
-        }
-        .photo-card-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          /* object-position: 50% 65%; */
-        }
-        .photo-card-text {
-          background-color: #fff;
-          height: 100%;
-          padding: 1.5rem;
-          margin-right: 2rem;
-          flex: 1 0 20%;
-          text-align: center;
-        }
-        .photo-text-container > * {
-          border-radius: 40px;
-        }
-        .motivated-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          /* text-align: center; */
-          padding: 2rem 2rem;
-          /* margin: 0 5% 3rem; */
-          /* background-color: #fff; */
-          border-radius: 40px;
-        }
-        .info-container {
-          margin: 0 5%;
-        }
-        .team-header {
-          font-size: 4rem;
-          padding-left: 1rem;
-        }
-        .team-container {
-          margin: 2rem auto 4rem;
-          max-width: 90rem;
-        }
-        .team-cards-container {
-          display: flex;
-          justify-content: space-between;
-          padding-top: 2rem;
-          margin: 0 1rem;
-        }
-        .member-card {
-          flex: 0 1 22%;
-          width: 310px;
-          /* min-height: 445px; */
-          border: 2px solid var(--aces-blue-light);
-          border-radius: 40px;
-          overflow: hidden;
-          background-color: #fff;
-        }
-        .member-img {
-          width: 100%;
-          /* margin-bottom: 1.5rem; */
-          /* box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1); */
-        }
-        .member-nametag {
-          text-align: center;
-          padding: 7% 5%;
-        }
-        span {
-          font-size: 1.2rem;
-        }
-        .showcase {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100vw;
-          /* padding: 2rem 20% 2rem; */
-          background-color: var(--aces-blue-dark);
-          overflow-y: hidden;
-        }
-        .showcase > img {
-          width: 100%;
-        }
-
-        .big-heading {
-          font-size: 2.5rem;
-          padding: 3rem 0 3rem;
-        }
-        .awards-container {
-          padding: 0 20% 2rem;
-          background-color: var(--aces-blue);
-        }
-        .awards-container > p {
-          font-size: 1.4rem;
-          padding: 1.5rem;
-          margin-bottom: 2rem;
-          background-color: #fff;
-          box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
-        }
-
-        @media (max-width: 64em) {
-          .team-cards-container {
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 0 5%;
-          }
-          .member-card {
-            flex: 0 1 40%;
-            margin-bottom: 2rem;
-          }
-          span {
-            font-size: 1rem;
-          }
-        }
-
-        @media (max-width: 35em) {
-          .motivated-text {
-            margin: 2rem 0;
-          }
-          .photo-text-container {
-            flex-direction: column;
-            height: auto;
-            margin-bottom: 2rem;
-          }
-          .team-header {
-            padding: 0;
-            text-align: center;
-            font-size: 3rem;
-          }
-          .team-cards-container {
-            flex-wrap: nowrap;
-            flex-direction: column;
-            align-items: center;
-          }
-          .awards-container {
-            padding: 0 5% 2rem;
-          }
-        }
-
-        @media (max-width: 64em) {
-          .mission-text {
-            padding: 1.5rem;
-          }
-          .photo-text-container {
-            flex-direction: column;
-            justify-content: space-between;
-            /* height: 48rem; */
-            margin-bottom: 4rem;
-          }
-          .text-card {
-            flex: 0 0 10%;
-            margin: 0;
-          }
-          .photo-card-container {
-            margin: 2rem 0;
-            flex: 0 0 40%;
-          }
-          .rewards-container {
-            flex-wrap: wrap;
-            padding: 0 0 2rem;
-          }
-          .rewards-card {
-            flex: 0 0 40%;
-            margin-bottom: 2rem;
-          }
-          .signup-photo-text-container {
-            margin: 0 5% 3rem;
-            flex-direction: column;
-            height: 55rem;
-          }
-          .signup-photo-card-container {
-            margin: 0 0 2rem;
-            flex: 0 0 40%;
-          }
-          .rewards-list {
-            padding-bottom: 1rem;
-          }
-        }
-
-        @media (max-width: 35em) {
-          .mission-container {
-            padding: 1rem 1.2rem;
-            flex-direction: column;
-            height: auto;
-          }
-          .photo-text-container {
-            flex-direction: column;
-            height: auto;
-            margin-bottom: 2rem;
-          }
-          .text-card {
-            padding: 0 1rem 3rem;
-            text-align: center;
-            margin: 0;
-          }
-          .text-card > p {
-            font-size: 1.2rem;
-          }
-          .photo-card-container {
-            margin: 0;
-          }
-          .rewards-container {
-            padding: 0;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            margin: 2rem 5%;
-            align-items: center;
-            height: 81.25rem;
-          }
-          .rewards-card {
-            flex: 0 1;
-          }
-          .rewards-icon {
-            padding: 0;
-          }
-          .signup-photo-text-container {
-            flex-direction: column;
-            height: auto;
-          }
-          .signup-photo-card-container {
-            margin: 0 0 3rem;
-          }
-          .motivated-text {
-            padding: 1.5rem;
-            font-size: 1.2rem;
-          }
-          .motivated-header {
-            text-align: center;
-          }
-          .rewards-list {
-            font-size: 1.2rem;
-          }
-        }
-      </style>
-    </div>
+    <!-- <div class="team-container" id="team">
+      <h2 class="heading text-center">Meet the ACES Team</h2>
+      <div class="team-cards-container">
+        <div class="member-card">
+          <img class="member-img" src={michael} alt="" />
+          <div class="member-nametag">
+            <h4>Michael Ferrer</h4>
+            <span>Director</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img class="member-img" src={jessicka} alt="" />
+          <div class="member-nametag">
+            <h4>Jessicka Castro</h4>
+            <span>Associate Director <br /> Lead Facilitator</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img class="member-img" src={jennifer} alt="" />
+          <div class="member-nametag">
+            <h4>Jennifer Sanabria</h4>
+            <span>Mentor <br /> Facilitator</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img class="member-img" src={lashane} alt="" />
+          <div class="member-nametag">
+            <h4>Lashane Hughley</h4>
+            <span>Mentor <br /> Facilitator</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </main>
+  <Footer />
+  <style is:global>
+    main {
+    }
+    .flex {
+      display: flex;
+      gap: var(--gap, 1rem);
+    }
+    body {
+      overflow-x: hidden;
+      background-color: #eee;
+      font-family: "Manrope", sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+    }
+    a {
+      font-weight: 500;
+    }
+    strong {
+      color: var(--aces-blue-dark);
+    }
+    .text-center {
+      text-align: center !important;
+    }
+    .heading {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+      margin: 0;
+    }
+    .bubble {
+      color: #000;
+      background-color: #eee;
+      /* border: 2px solid var(--aces-blue-light); */
+    }
+    .outline {
+      border: 2px solid var(--aces-blue-light);
+    }
+    .blurb {
+      font-size: 1.5rem;
+    }
+    .soi-container {
+      padding-top: 2rem;
+    }
+    .mission-text {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin: 2rem 5%;
+      /* background-color: #fff; */
+      border-radius: 40px;
+
+      /* width: 90%; */
+    }
+    .photo-text-container {
+      display: flex;
+      margin: 0 5% 5rem;
+      justify-content: space-between;
+      height: 55rem;
+    }
+    .text-card {
+      display: flex;
+      flex: 1 0 45%;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+      text-align: left;
+      margin-right: 5rem;
+      /* padding: 1.5rem; */
+      /* background-color: #fff; */
+      color: #000;
+    }
+    .photo-card-container {
+      flex: 0 0 50%;
+      margin-right: 2rem;
+      overflow: hidden;
+      box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
+      /* background-position: center;
+      background-size: cover; */
+    }
+    .photo-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* object-position: 50% 65%; */
+    }
+    .photo-card-text {
+      background-color: #fff;
+      height: 100%;
+      padding: 1.5rem;
+      margin-right: 2rem;
+      flex: 1 0 20%;
+      text-align: center;
+    }
+    .photo-text-container > * {
+      border-radius: 40px;
+    }
+    .motivated-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 2rem;
+      /* margin: 0 5% 3rem; */
+      /* background-color: #fff; */
+      border-radius: 40px;
+    }
+    .info-container {
+      margin: 0 5% 5rem;
+    }
+    .info-button-container {
+      /* display: flex; */
+      padding: 0.8rem;
+      /* position: fixed; */
+      border-radius: 40px;
+      /* margin-bottom: 10%; */
+    }
+    .info-button-container > span {
+      padding-right: 0.5rem;
+    }
+    .info-button {
+      border: none;
+      padding: 0;
+      background: transparent;
+    }
+    .info-button:hover {
+      rotate: 360deg;
+      transform: scale(1.2);
+      transition: 0.3s rotate ease-out;
+    }
+    .info-icon {
+      fill: var(--aces-blue);
+    }
+    .info-icon:active {
+      fill: var(--aces-blue-dark);
+    }
+    .download-button {
+      border: none;
+      padding: 0;
+      background: transparent;
+    }
+    .download-button:hover {
+      transform: scale(1.2);
+      transition: 0.3s scale ease-out;
+    }
+    .team-header {
+      font-size: 4rem;
+      padding-left: 1rem;
+    }
+    .team-container {
+      margin: 2rem auto 4rem;
+      max-width: 90rem;
+    }
+    .team-cards-container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+      margin: 0 1rem;
+    }
+    .member-card {
+      flex: 0 1 22%;
+      width: 310px;
+      /* min-height: 445px; */
+      border: 2px solid var(--aces-blue-light);
+      border-radius: 40px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    .member-img {
+      width: 100%;
+      /* margin-bottom: 1.5rem; */
+      /* box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1); */
+    }
+    .member-nametag {
+      text-align: center;
+      padding: 7% 5%;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+    .showcase {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      /* padding: 2rem 20% 2rem; */
+      background-color: var(--aces-blue-dark);
+      overflow-y: hidden;
+    }
+    .showcase > img {
+      width: 100%;
+    }
+
+    .big-heading {
+      font-size: 2.5rem;
+      padding: 3rem 0 3rem;
+    }
+    .awards-container {
+      padding: 0 20% 2rem;
+      background-color: var(--aces-blue);
+    }
+    .awards-container > p {
+      font-size: 1.4rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: #fff;
+      box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
+    }
+
+    @media (max-width: 64em) {
+      .team-cards-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 5%;
+      }
+      .member-card {
+        flex: 0 1 40%;
+        margin-bottom: 2rem;
+      }
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 35em) {
+      .motivated-text {
+        margin: 2rem 0;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+      .team-header {
+        padding: 0;
+        text-align: center;
+        font-size: 3rem;
+      }
+      .team-cards-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+      }
+      .awards-container {
+        padding: 0 5% 2rem;
+      }
+    }
+
+    @media (max-width: 64em) {
+      .mission-text {
+        padding: 1.5rem;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: 48rem; */
+        margin-bottom: 4rem;
+      }
+      .text-card {
+        flex: 0 0 10%;
+        margin: 0;
+      }
+      .photo-card-container {
+        margin: 2rem 0;
+        flex: 0 0 40%;
+      }
+      .rewards-container {
+        flex-wrap: wrap;
+        padding: 0 0 2rem;
+      }
+      .rewards-card {
+        flex: 0 0 40%;
+        margin-bottom: 2rem;
+      }
+      .signup-photo-text-container {
+        margin: 0 5% 3rem;
+        flex-direction: column;
+        height: 55rem;
+      }
+      .signup-photo-card-container {
+        margin: 0 0 2rem;
+        flex: 0 0 40%;
+      }
+      .rewards-list {
+        padding-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 35em) {
+      .mission-container {
+        padding: 1rem 1.2rem;
+        flex-direction: column;
+        height: auto;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+      .text-card {
+        padding: 0 1rem 3rem;
+        text-align: center;
+        margin: 0;
+      }
+      .text-card > p {
+        font-size: 1.2rem;
+      }
+      .photo-card-container {
+        margin: 0;
+      }
+      .rewards-container {
+        padding: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 2rem 5%;
+        align-items: center;
+        height: 81.25rem;
+      }
+      .rewards-card {
+        flex: 0 1;
+      }
+      .rewards-icon {
+        padding: 0;
+      }
+      .signup-photo-text-container {
+        flex-direction: column;
+        height: auto;
+      }
+      .signup-photo-card-container {
+        margin: 0 0 3rem;
+      }
+      .motivated-text {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+      }
+      .motivated-header {
+        text-align: center;
+      }
+      .rewards-list {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 
 
 </html>

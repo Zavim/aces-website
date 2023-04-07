@@ -2,14 +2,19 @@
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
+import RewardsCard from "../components/RewardsCard.jsx";
 
 import paddleBoarding from "/paddleBoarding.jpg";
 import mouseAndCat from "/mouseAndCat1200.jpg";
 import medals from "/medals.svg";
 import suitcase from "/suitcase.svg";
-// import graph from "/graph.svg";
 import partners from "/partners.svg";
 import head from "/head.svg";
+
+import robots from "/robots1200.jpg";
+import serving from "/serving1200.jpg";
+import group from "/group1600.jpg";
+import strength from "/tensileStrength.jpg";
 ---
 
 <!DOCTYPE html>
@@ -22,10 +27,12 @@ import head from "/head.svg";
   <Navbar />
   <main>
     <Slideshow />
-    <div class="mission-container">
-      <p class="mission-text blurb outline">
-        <strong>ACES</strong> (Achievement through Community Education & Support)
-        is a fun-focused high school mentoring program. <br /><span>
+    <div class="mission-text blurb blue-fill">
+      <h2 style="padding-bottom: 1rem;">
+        Achievement through Community Education & Support (ACES)
+      </h2>
+      <p>
+        We are a fun-focused high school mentoring program. <br /><span>
           We help 9th-12th grade Lorain High School/Success Academy students
           accept and successfully navigate a series of challenges.
         </span>
@@ -39,6 +46,25 @@ import head from "/head.svg";
         <strong>Our program runs yearly from July 1st – June 30th</strong>
       </p>
     </div>
+    <!-- <div class="mission-text blurb outline">
+      <h2 style="padding-bottom: 1rem;">
+        Achievement through Community Education & Support (ACES)
+      </h2>
+      <p>
+        We are a fun-focused high school mentoring program. <br /><span>
+          We help 9th-12th grade Lorain High School/Success Academy students
+          accept and successfully navigate a series of challenges.
+        </span>
+        <br />
+        <span
+          >The students develop inherent skills to overcome barriers hindering
+          educational, social, emotional and career growth.</span
+        >
+        <br />
+        <br />
+        <strong>Our program runs yearly from July 1st – June 30th</strong>
+      </p>
+    </div> -->
 
     <div class="photo-text-container">
       <div class="text-card">
@@ -66,10 +92,112 @@ import head from "/head.svg";
       </div>
     </div>
     <div class="rewards-container">
-      <div class="rewards-card">
-        <!-- <div class="rewards-curtain">
-          <img class="rewards-icon" src={medals} alt="a stack of medals" />
-        </div> -->
+      <RewardsCard client:visible>
+        <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={robots}
+          alt="students in classroom looking at robots and blocks on the floor"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="rewards-icon"
+          height="48"
+          width="48"
+          slot="icon"
+          fill="#fff"
+          ><path
+            d="M24 41q4.15 0 7.075-2.925T34 31q0-4.15-2.925-7.075T24 21q-4.15 0-7.075 2.925T14 31q0 4.15 2.925 7.075T24 41Zm-6.7-21.15q1.4-.85 3-1.325T23.65 18l-5.5-11h-7.3Zm13.4 0L37.15 7h-7.3l-5.5 11q1.75.05 3.35.525 1.6.475 3 1.325Zm-17.05 19q-1.25-1.65-1.95-3.625T11 31q0-2.25.7-4.225.7-1.975 1.95-3.625-2.85.5-4.75 2.675T7 31q0 3 1.9 5.175t4.75 2.675Zm20.7 0q2.85-.5 4.75-2.675T41 31q0-3-1.9-5.175t-4.75-2.675q1.25 1.65 1.95 3.625T37 31q0 2.25-.7 4.225-.7 1.975-1.95 3.625ZM24 44q-2 0-3.825-.575-1.825-.575-3.375-1.575-.45.1-.9.125-.45.025-.95.025-4.55 0-7.75-3.2T4 31.05q0-4.35 2.9-7.45 2.9-3.1 7.15-3.45L6 4h14l4 8 4-8h14l-8 16.05q4.25.4 7.125 3.5T44 31q0 4.6-3.2 7.8T33 42q-.45 0-.925-.025-.475-.025-.925-.125-1.55 1-3.35 1.575T24 44Zm0-13Zm-6.7-11.15L10.85 7l6.45 12.85Zm13.4 0L37.15 7ZM24 36l-1.55-3.45L19 31l3.45-1.55L24 26l1.55 3.45L29 31l-3.45 1.55Z"
+          ></path></svg
+        >
+        <!-- </div> -->
+        <p slot="content" class="rewards-card-text">
+          Students experience their power through the successful completion of
+          challenges that generate rewards and incentives.
+        </p>
+      </RewardsCard>
+      <RewardsCard client:visible>
+        <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={serving}
+          alt="ACES student serving dinner to two elderly people"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="48"
+          viewBox="0 96 960 960"
+          width="48"
+          class="rewards-icon"
+          slot="icon"
+          stroke="#fff"
+          fill="#fff"
+          ><path
+            d="M140 936q-24 0-42-18t-18-42V396q0-24 18-42t42-18h180V236q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680V396H140v480Zm240-540h200V236H380v100ZM140 876V396v480Z"
+          ></path></svg
+        >
+        <!-- <img slot="icon" class="rewards-icon" src={suitcase} alt="" /> -->
+        <p slot="content" class="rewards-card-text">
+          Community service challenges are converted into employment
+          opportunities when organizations like <br />
+          <a href="https://ohiomeansjobs.ohio.gov/home/">Ohio Means Jobs</a>
+          interview students in May.
+        </p>
+      </RewardsCard>
+      <RewardsCard client:visible>
+        <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={group}
+          alt="group picture of ACES students and employees"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="48"
+          viewBox="0 96 960 960"
+          width="48"
+          class="rewards-icon"
+          slot="icon"
+          stroke="#fff"
+          fill="#fff"
+          ><path
+            d="m540 652-27-61-61-27 61-27 27-61 27 61 61 27-61 27-27 61ZM420 432l-40-88-88-40 88-40 40-88 40 88 88 40-88 40-40 88ZM40 896V736q0-29 20.5-49.5T110 666h141q17 0 32.5 8.5T310 698q29 42 74 65t96 23q51 0 96-23t75-65q11-15 26-23.5t32-8.5h141q29 0 49.5 20.5T920 736v160H660V777q-36 33-82.5 51T480 846q-51 0-97-18t-83-51v119H40Zm120-300q-45 0-77.5-32.5T50 486q0-46 32.5-78t77.5-32q46 0 78 32t32 78q0 45-32 77.5T160 596Zm640 0q-45 0-77.5-32.5T690 486q0-46 32.5-78t77.5-32q46 0 78 32t32 78q0 45-32 77.5T800 596Z"
+          ></path></svg
+        >
+        <p slot="content" class="rewards-card-text">
+          Students form new relationships with Lorain County businesses and grow
+          their entrepreneurship skills through positive reinforcement.
+        </p>
+      </RewardsCard>
+      <RewardsCard client:visible>
+        <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={strength}
+          alt="group picture of ACES students and employees"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="48"
+          viewBox="0 96 960 960"
+          width="48"
+          class="rewards-icon"
+          slot="icon"
+          stroke="#fff"
+          fill="#fff"
+          ><path
+            d="M490.74 707Q557 707 603 664.922T649 563q0-52-33.58-89T534 437q-42 0-72 27.5t-30 66.611Q432 548 438.5 564q6.5 16 19.5 30l44-42q-5-3.5-7.5-8.75T492 532q0-14 11-24t31-10q23 0 39.5 18.5T590 564q0 35.189-28 59.595Q534 648 492 648q-51.196 0-86.598-40.5T370 507.417Q370 476 381.5 448t33.5-50l-43-43q-30 29-46.5 68.284-16.5 39.283-16.5 82.4Q309 590 362.008 648.5 415.015 707 490.74 707ZM240 976V804q-57-52-88.5-121.5T120 536q0-150 105-255t255-105q125 0 221.5 73.5T827 441l55 218q4 14-5 25.5T853 696h-93v140q0 24.75-17.625 42.375T700 896H600v80h-60V836h160V636h114l-45-180q-24-97-105-158.5T480 236q-125 0-212.5 86.5T180 533.54q0 64.417 26.324 122.392Q232.649 713.908 281 759l19 18v199h-60Zm257-370Z"
+          ></path></svg
+        >
+        <p slot="content" class="rewards-card-text">
+          Students will realize that personal progress can be acquired through
+          leadership training, proper mindset, college prep and community
+          service.
+        </p>
+      </RewardsCard>
+    </div>
+
+    <!-- <div class="rewards-card">
         <p>
           Students experience their power through the successful completion of
           challenges that generate rewards and incentives.
@@ -98,14 +226,9 @@ import head from "/head.svg";
           leadership training, proper mindset, college prep and community
           service.
         </p>
-        <img
-          class="rewards-icon"
-          src={head}
-          alt="a stack of medals"
-          style="color: green;"
-        />
-      </div>
-      <!-- <p>
+        <img class="rewards-icon" src={head} alt="a stack of medals" />
+      </div> -->
+    <!-- <p>
         Our goal is to motivate Students to want to meet outside of school for
         two or more days per week to include fieldtrips for a total of 10 hours
         each week, rides to/from included (this would be in addition to any in
@@ -132,7 +255,6 @@ import head from "/head.svg";
         academically/behaviorally at their school and complete personal
         obligations at home to remain in the program.
       </p> -->
-    </div>
 
     <div class="signup-photo-text-container">
       <div class="signup-photo-card-container">
@@ -142,7 +264,7 @@ import head from "/head.svg";
           alt="children in front of two people costumed, one as a cat and the other, a mouse"
         />
       </div>
-      <div class="motivated-text blurb outline">
+      <div class="motivated-text blurb blue-fill">
         <div>
           <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
           <ul class="rewards-list">
@@ -157,6 +279,21 @@ import head from "/head.svg";
         </div>
         <div><button class="signup">Sign Up!</button></div>
       </div>
+      <!-- <div class="motivated-text blurb outline">
+        <div>
+          <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
+          <ul class="rewards-list">
+            <li>Improve/maintain academic performance</li>
+            <li>Attend school regularly</li>
+            <li>Participate in after-school tutoring</li>
+            <li>
+              Avoid behaviors that lead to negative referrals and suspensions
+            </li>
+            <li>Contemplate a more positive future</li>
+          </ul>
+        </div>
+        <div><button class="signup">Sign Up!</button></div>
+      </div> -->
     </div>
   </main>
   <Footer />
@@ -171,6 +308,15 @@ import head from "/head.svg";
       overflow-x: hidden;
       /* background-color: var(--aces-blue); */
       background-color: #eee;
+      font-family: "Manrope", sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
     }
     .text-center {
       text-align: center !important;
@@ -179,11 +325,20 @@ import head from "/head.svg";
       border: 2px solid var(--aces-blue-light);
       /* border-color: var(--aces-blue); */
     }
-    .mission-container {
-      /* align-items: center; */
-      /* background-color: #eee; */
-      /* background-color: var(--aces-blue); */
+    .blue-fill {
+      background-color: var(--aces-blue);
+      color: #fff;
     }
+    .part-transparent {
+      opacity: 0.5;
+    }
+    /* .container {
+      position: relative;
+      width: 100%;
+      flex: 0 1 20%;
+      width: 333px;
+      min-height: 300px;
+    } */
     .mission-text {
       text-align: center;
       padding: 2rem 0;
@@ -217,10 +372,13 @@ import head from "/head.svg";
       display: flex;
       margin: 5rem 5% 5rem;
       justify-content: space-between;
+      border-radius: 40px;
       /* background-color: var(--aces-blue); */
       height: 525px;
     }
-    .photo-text-container > *,
+    .photo-text-container > * {
+      border-radius: 40px;
+    }
     .signup-photo-text-container > * {
       border-radius: 40px;
     }
@@ -241,6 +399,7 @@ import head from "/head.svg";
     }
     .text-card > p {
       font-size: 1.5rem;
+      /* font-weight: 500; */
     }
     .photo-card-container {
       /* flex: 0 0 49%; */
@@ -253,6 +412,8 @@ import head from "/head.svg";
       width: 100%;
       height: 100%;
       object-fit: cover;
+      /* opacity: 0.7; */
+      /* z-index: -1; */
       /* object-position: 50% 65%; */
     }
     .photo-card-text {
@@ -268,48 +429,69 @@ import head from "/head.svg";
     }
     .rewards-list {
       font-size: 1.5rem;
-      padding: 1rem 0 0;
-      list-style: none;
-      margin-bottom: 0;
+      padding-top: 1rem;
+      list-style-type: "★";
+      margin-bottom: 1rem;
     }
     li {
-      padding: 0.5rem 0;
+      padding: 0.5rem 0 0 1rem;
+    }
+    li::marker {
+      /* color: var(--aces-blue); */
+      color: var(--aces-blue-dark);
+    }
+    li::marker:hover {
+      rotate: 60deg;
     }
     .rewards-container {
       display: flex;
-      /* flex-wrap: wrap; */
-      justify-content: space-evenly;
-      padding: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
       /* margin: 0 5%; */
       /* background-color: #ccc; */
       /* background-color: var(--aces-blue); */
     }
     .rewards-card {
+      position: relative;
       display: flex;
-      flex: 0 1 20%;
+      /* flex: 0 1 20%; */
+      flex: 0 1 35%;
       flex-direction: column;
       width: 333px;
-      min-height: 300px;
-      /* flex: 0 0 19%; */
+      /* min-height: 300px; */
+      min-height: 460px;
       align-items: center;
       justify-content: space-around;
       text-align: center;
       font-size: 1.2rem;
-      padding: 1.5rem;
+      font-weight: 500;
       border-radius: 10px;
+      padding: 1.5rem;
+      margin: 0 1rem 2rem;
       overflow: hidden;
       background-color: #fff;
       box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
     }
-    .rewards-curtain {
-      position: relative;
-      z-index: 3;
-      background-color: var(--aces-blue-dark);
-      width: 100%;
-      height: 100%;
+    .rewards-card-text {
+      font-size: 1.5rem;
+    }
+    .rewards-card.icon-side {
+      padding: 0;
+      background-image: linear-gradient(
+        var(--aces-blue),
+        var(--aces-blue-dark)
+      );
+    }
+    .rewards-card > .photo-card-img {
+      opacity: 0.5;
     }
     .rewards-icon {
-      padding-top: 2rem;
+      position: absolute;
+      top: 45%;
+      bottom: 50%;
+      transform: scale(2);
+      /* -ms-transform: translate(-50%, -50%); */
+      /* padding-top: 2rem; */
     }
     .motivated-text {
       display: flex;
@@ -322,18 +504,22 @@ import head from "/head.svg";
       /* background-color: #fff; */
       border-radius: 40px;
     }
+    .motivated-header {
+      padding: 0 1rem;
+      text-align: center;
+    }
     .signup-photo-text-container {
       display: flex;
       margin: 3rem 7.5% 5rem;
-      justify-content: space-between;
+      justify-content: space-around;
       /* background-color: var(--aces-blue); */
       height: fit-content;
     }
     .signup-photo-card-container {
-      flex: 0 0 60%;
+      flex: 0 0 40%;
       overflow: hidden;
       box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
-      margin-right: 2rem;
+      margin-right: 1rem;
       /* background-position: center;
       background-size: cover; */
     }
@@ -341,16 +527,17 @@ import head from "/head.svg";
       border: none;
       border-radius: 40px;
       color: #fff;
-      background-color: var(--aces-blue);
+      /* background-color: var(--aces-blue); */
+      background-color: var(--aces-blue-dark);
       padding: 1rem 2rem;
       margin: 1rem 0;
       box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
     }
     .signup:hover {
-      background-color: var(--aces-blue-dark);
+      background-color: var(--aces-blue-very-dark);
       transform: translateY(5px);
       box-shadow: none;
-      transition: 0.1s transform ease-in;
+      transition: 0.1s transform ease-out;
     }
 
     @media (max-width: 64em) {
@@ -383,10 +570,6 @@ import head from "/head.svg";
         flex: 0 0 40%;
         margin-bottom: 2rem;
       }
-      /* .photo-card-container,
-      .photo-card-img {
-        height: 50%;
-      } */
       .signup-photo-text-container {
         margin: 0 5% 3rem;
         flex-direction: column;
@@ -409,7 +592,6 @@ import head from "/head.svg";
       }
       .mission-text {
         font-size: 1.2rem;
-        margin: 0;
         padding: 1.5rem;
       }
       .blurb {
@@ -417,7 +599,7 @@ import head from "/head.svg";
       .photo-text-container {
         flex-direction: column;
         height: auto;
-        margin-bottom: 3rem;
+        margin: 3rem 5% 3rem;
       }
       .text-card {
         padding: 0 1rem 3rem;
@@ -442,6 +624,8 @@ import head from "/head.svg";
       }
       .rewards-card {
         flex: 0 1;
+        min-height: 300px;
+
         /* margin: 0.5rem 1.2rem; */
         /* margin: 1rem 0; */
       }
