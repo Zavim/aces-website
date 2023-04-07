@@ -171,7 +171,7 @@ import MoreInfo from "../components/MoreInfo";
       display: flex;
       margin: 0 5% 5rem;
       justify-content: space-between;
-      height: 55rem;
+      /* height: 55rem; */
     }
     .text-card {
       display: flex;
@@ -225,6 +225,7 @@ import MoreInfo from "../components/MoreInfo";
       margin: 0 5% 5rem;
     }
     .info-button-container {
+      margin-top: 2rem;
       /* display: flex; */
       padding: 0.8rem;
       /* position: fixed; */
@@ -249,6 +250,9 @@ import MoreInfo from "../components/MoreInfo";
     }
     .info-icon:active {
       fill: var(--aces-blue-dark);
+    }
+    .new-tab-linebreak {
+      display: none;
     }
     .download-button {
       border: none;
@@ -339,6 +343,10 @@ import MoreInfo from "../components/MoreInfo";
     }
 
     @media (max-width: 35em) {
+      .flex {
+        flex-direction: column;
+        gap: var(--gap, 0.5rem);
+      }
       .motivated-text {
         margin: 2rem 0;
       }
@@ -346,6 +354,10 @@ import MoreInfo from "../components/MoreInfo";
         flex-direction: column;
         height: auto;
         margin-bottom: 2rem;
+      }
+
+      .new-tab-linebreak {
+        display: inline;
       }
       .team-header {
         padding: 0;
