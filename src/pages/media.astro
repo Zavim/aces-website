@@ -1,0 +1,403 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <Navbar />
+  <main>
+    <div class="showcase-container">
+      <div class="heading-container">
+        <h2 class="heading text-center">Out of Darkness</h2>
+        <h4 class="text-center">Anti Bullying Video</h4>
+      </div>
+      <section class="showcase">
+        <video playsinline controls poster="/ACES-logo-star.png">
+          <source src="/outOfDarkness.mp4" type="video/mp4" />
+          <!-- <source src="" type="video/webm" /> -->
+          Sorry, your browser doesn't support HTML video.
+        </video>
+        <video playsinline controls poster="/ACES-logo-star.png">
+          <source src="/outOfDarkness2.m4v" type="video/mp4" />
+          <!-- <source src="" type="video/webm" /> -->
+          Sorry, your browser doesn't support HTML video.
+        </video>
+      </section>
+    </div>
+  </main>
+  <Footer />
+  <style is:global>
+    main {
+    }
+    .flex {
+      display: flex;
+      gap: var(--gap, 1rem);
+    }
+    body {
+      overflow-x: hidden;
+      background-color: #eee;
+      font-family: "Manrope", sans-serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+    }
+    a {
+      font-weight: 500;
+    }
+    strong {
+      color: var(--aces-blue-dark);
+    }
+    .text-center {
+      text-align: center !important;
+    }
+    .heading {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+      margin: 0;
+    }
+    .bubble {
+      color: #000;
+      background-color: #eee;
+      /* border: 2px solid var(--aces-blue-light); */
+    }
+    .outline {
+      border: 2px solid var(--aces-blue-light);
+    }
+    .blurb {
+      font-size: 1.5rem;
+    }
+    .heading-container {
+      padding-bottom: 2rem;
+    }
+    .showcase-container {
+      padding-top: 2rem;
+    }
+    .showcase {
+      /* width: 100%; */
+      margin: 0 5%;
+      display: flex;
+      justify-content: space-between;
+      /* height: 50rem; */
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    .showcase > video {
+      width: 100%;
+      height: 100%;
+      flex: 0 1 48%;
+      display: block;
+      object-fit: cover;
+      background-color: var(--aces-blue-dark);
+    }
+    .mission-text {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin: 2rem 5%;
+      /* background-color: #fff; */
+      border-radius: 40px;
+
+      /* width: 90%; */
+    }
+    .photo-text-container {
+      display: flex;
+      margin: 0 5% 5rem;
+      justify-content: space-between;
+      height: 50rem;
+    }
+    .text-card {
+      display: flex;
+      flex: 1 0 45%;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+      text-align: left;
+      margin-right: 5rem;
+      /* padding: 1.5rem; */
+      /* background-color: #fff; */
+      color: #000;
+    }
+    .photo-card-container {
+      flex: 0 0 50%;
+      margin-right: 2rem;
+      overflow: hidden;
+      box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
+      /* background-position: center;
+      background-size: cover; */
+    }
+    .photo-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* object-position: 50% 65%; */
+    }
+    .photo-card-text {
+      background-color: #fff;
+      height: 100%;
+      padding: 1.5rem;
+      margin-right: 2rem;
+      flex: 1 0 20%;
+      text-align: center;
+    }
+    .photo-text-container > * {
+      border-radius: 40px;
+    }
+    .motivated-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 2rem;
+      /* margin: 0 5% 3rem; */
+      /* background-color: #fff; */
+      border-radius: 40px;
+    }
+    .info-container {
+      margin: 0 5% 5rem;
+    }
+    .info-button-container {
+      margin-top: 2rem;
+      /* display: flex; */
+      padding: 0.8rem;
+      /* position: fixed; */
+      border-radius: 40px;
+      /* margin-bottom: 10%; */
+    }
+    .info-button-container > span {
+      padding-right: 0.5rem;
+    }
+    .info-button {
+      border: none;
+      padding: 0;
+      background: transparent;
+    }
+    .info-button:hover {
+      rotate: 360deg;
+      transform: scale(1.2);
+      transition: 0.3s rotate ease-out;
+    }
+    .info-icon {
+      fill: var(--aces-blue);
+    }
+    .info-icon:active {
+      fill: var(--aces-blue-dark);
+    }
+    .new-tab-linebreak {
+      display: none;
+    }
+    .download-button {
+      border: none;
+      padding: 0;
+      background: transparent;
+    }
+    .download-button:hover {
+      transform: scale(1.2);
+      transition: 0.3s scale ease-out;
+    }
+    .team-header {
+      font-size: 4rem;
+      padding-left: 1rem;
+    }
+    .team-container {
+      margin: 2rem auto 4rem;
+      max-width: 90rem;
+    }
+    .team-cards-container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+      margin: 0 1rem;
+    }
+    .member-card {
+      flex: 0 1 22%;
+      width: 310px;
+      /* min-height: 445px; */
+      border: 2px solid var(--aces-blue-light);
+      border-radius: 40px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    .member-img {
+      width: 100%;
+      /* margin-bottom: 1.5rem; */
+      /* box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1); */
+    }
+    .member-nametag {
+      text-align: center;
+      padding: 7% 5%;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+    .big-heading {
+      font-size: 2.5rem;
+      padding: 3rem 0 3rem;
+    }
+    .awards-container {
+      padding: 0 20% 2rem;
+      background-color: var(--aces-blue);
+    }
+    .awards-container > p {
+      font-size: 1.4rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: #fff;
+      box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
+    }
+
+    @media (max-width: 64em) {
+      .team-cards-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 5%;
+      }
+      .member-card {
+        flex: 0 1 40%;
+        margin-bottom: 2rem;
+      }
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 35em) {
+      .flex {
+        flex-direction: column;
+        gap: var(--gap, 0.5rem);
+      }
+      .motivated-text {
+        margin: 2rem 0;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+
+      .new-tab-linebreak {
+        display: inline;
+      }
+      .team-header {
+        padding: 0;
+        text-align: center;
+        font-size: 3rem;
+      }
+      .team-cards-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+      }
+      .awards-container {
+        padding: 0 5% 2rem;
+      }
+    }
+
+    @media (max-width: 64em) {
+      .mission-text {
+        padding: 1.5rem;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: 48rem; */
+        margin-bottom: 4rem;
+      }
+      .text-card {
+        flex: 0 0 10%;
+        margin: 0;
+      }
+      .photo-card-container {
+        margin: 2rem 0;
+        flex: 0 0 40%;
+      }
+      .rewards-container {
+        flex-wrap: wrap;
+        padding: 0 0 2rem;
+      }
+      .rewards-card {
+        flex: 0 0 40%;
+        margin-bottom: 2rem;
+      }
+      .signup-photo-text-container {
+        margin: 0 5% 3rem;
+        flex-direction: column;
+        height: 55rem;
+      }
+      .signup-photo-card-container {
+        margin: 0 0 2rem;
+        flex: 0 0 40%;
+      }
+      .rewards-list {
+        padding-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 35em) {
+      .mission-container {
+        padding: 1rem 1.2rem;
+        flex-direction: column;
+        height: auto;
+      }
+      .photo-text-container {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+      .text-card {
+        padding: 0 1rem 3rem;
+        text-align: center;
+        margin: 0;
+      }
+      .text-card > p {
+        font-size: 1.2rem;
+      }
+      .photo-card-container {
+        margin: 0;
+      }
+      .rewards-container {
+        padding: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 2rem 5%;
+        align-items: center;
+        height: 81.25rem;
+      }
+      .rewards-card {
+        flex: 0 1;
+      }
+      .rewards-icon {
+        padding: 0;
+      }
+      .signup-photo-text-container {
+        flex-direction: column;
+        height: auto;
+      }
+      .signup-photo-card-container {
+        margin: 0 0 3rem;
+      }
+      .motivated-text {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+      }
+      .motivated-header {
+        text-align: center;
+      }
+      .rewards-list {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+
+
+</html>

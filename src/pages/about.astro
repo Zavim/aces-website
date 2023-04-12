@@ -29,52 +29,12 @@ import MoreInfo from "../components/MoreInfo";
           <img
             class="photo-card-img"
             src={pool}
-            alt="two kids behind a bottle of coke furiously spurting from the top due to the reaction between Coke and Mentos"
+            alt="two kids behind a bottle of Coke furiously spurting from the top due to the reaction between Coke and Mentos"
           />
         </div>
         <MoreInfo client:visible />
       </div>
     </div>
-    <!-- <p class="mission-text blurb outline">
-        ACES and The Lorain Cooperative Ministry, in collaboration with NASA and
-        other service providers, will host a Summer of Innovation (SOI) for
-        Lorain County Youth, grades 2nd – 7th.<br /> The SOI program is from June
-        19 – August 10, 2023 and comprises eight (8) separate four (4) days per week
-        (Mondays thru Thursdays) <strong>STE(A)M</strong> (Science, Technology, Engineering
-        (Arts) and Math) focused journeys with each Thursday serving as a Music,
-        Arts, or game day. Most activities will take place primarily at Greater Victory
-        Church located at 559 Reid Avenue in Lorain. <br /> All camps will run from
-        11:00am - 3:00pm on Monday through Thursday (kids can be dropped off starting
-        at 10:30am). Parents are responsible for transportation to and from the program
-        daily unless permission has been provided for the child to walk to and from
-        the program each day. Lunch and snacks will be provided daily at no cost
-        to students or parents.
-      </p> -->
-    <!-- <div class="info-container">
-      <div class="motivated-text blurb outline">
-        <p>
-          It is important that you only mark the weekly camps that your child
-          WILL ATTEND. If you sign up for a given week and your child cannot
-          attend that week you must call us at 440-654-8018, or we will assume
-          your child is out for the remainder of the summer. Depending on
-          availability, we will be attending movies and probably be swimming at
-          Maude Nieding Park pool (if allowable) one day per week beginning with
-          week 2. If we are allowed to swim your child will need to bring a
-          bathing suit and towel on that day (hopefully Wednesdays) each week
-          (also they must still wear gym shoes).
-        </p>
-
-        <p>
-          ACES and our collaborating partners intend to provide STE(A)M focused,
-          exciting summer adventures to youth in 2nd - 7th grade and hope you
-          are able to join us for this year’s FREE Summer of Innovation. Please
-          call Mike Ferrer at 440-336-1501 if you have questions about our
-          safety measures. We intend to continue masking while indoors, social
-          distancing, engage in extensive hand washing, cleaning and
-          disinfection of the facility on a daily basis.
-        </p>
-      </div>
-    </div> -->
     <!-- <div class="team-container" id="team">
       <h2 class="heading text-center">Meet the ACES Team</h2>
       <div class="team-cards-container">
@@ -171,7 +131,7 @@ import MoreInfo from "../components/MoreInfo";
       display: flex;
       margin: 0 5% 5rem;
       justify-content: space-between;
-      /* height: 55rem; */
+      height: 50rem;
     }
     .text-card {
       display: flex;
@@ -327,7 +287,16 @@ import MoreInfo from "../components/MoreInfo";
       box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
     }
 
+    @media (max-width: 83.375em) {
+      .blurb {
+        font-size: 1.2rem;
+      }
+    }
+
     @media (max-width: 64em) {
+      .photo-text-container {
+        height: auto;
+      }
       .team-cards-container {
         flex-wrap: wrap;
         justify-content: space-around;

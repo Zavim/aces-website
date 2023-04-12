@@ -29,9 +29,11 @@ export default function Topbar() {
               <NavDropdown.Item href="/about#team">Our Team</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Media" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#">Videos</NavDropdown.Item>
-              <NavDropdown.Item href="#">Photos</NavDropdown.Item>
-              <NavDropdown.Item href="#">Newspaper</NavDropdown.Item>
+              <NavDropdown.Item href="/media#videos">Videos</NavDropdown.Item>
+              <NavDropdown.Item href="/media#photos">Photos</NavDropdown.Item>
+              <NavDropdown.Item href="/media#newspaper">
+                Newspaper
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#">Donate</Nav.Link>
             <Nav.Link href="#">Sign Up!</Nav.Link>
