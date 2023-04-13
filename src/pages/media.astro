@@ -1,6 +1,13 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+
+import coke from "/cokeBottle.png";
+import largeGroup from "/largeGroup.jpg";
+import houseInFront from "/houseInFront.jpg";
+import plates from "/plates.jpg";
+import gala from "/gala.jpg";
+import team from "/team.jpeg";
 ---
 
 <!DOCTYPE html>
@@ -14,7 +21,7 @@ import Navbar from "../components/Navbar.astro";
   <main>
     <div class="showcase-container">
       <div class="heading-container">
-        <h2 class="heading text-center">Out of Darkness</h2>
+        <h2 class="heading text-center" id="videos">Out of Darkness</h2>
         <h4 class="text-center">Anti Bullying Video</h4>
       </div>
       <section class="showcase">
@@ -29,6 +36,51 @@ import Navbar from "../components/Navbar.astro";
           Sorry, your browser doesn't support HTML video.
         </video>
       </section>
+    </div>
+    <h2 class="heading text-center" id="photos">Photos</h2>
+
+    <div class="photo-grid-container flex">
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={largeGroup} alt="" />
+      </div>
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={coke} alt="" />
+      </div>
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={houseInFront} alt="" />
+      </div>
+    </div>
+    <div class="photo-grid-container-bottom flex">
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={plates} alt="" />
+      </div>
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={gala} alt="" />
+      </div>
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={team} alt="" />
+      </div>
+    </div>
+
+    <h2 class="heading text-center" id="newspaper">Newspaper</h2>
+
+    <div class="flex" style="justify-content:center; margin:2rem 5% 5rem">
+      <div class="info-button-container outline">
+        <span> Download Article (opens new tab)</span>
+        <a href="/ACESarticle.pdf">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="info-icon download-button"
+            height="48"
+            viewBox="0 96 960 960"
+            width="48"
+          >
+            <path
+              d="M280 776h400v-60H280v60Zm197-126 158-157-42-42-85 84V336h-60v199l-85-84-42 42 156 157Zm3 326q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z"
+            ></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </main>
   <Footer />
@@ -81,7 +133,7 @@ import Navbar from "../components/Navbar.astro";
       padding-bottom: 2rem;
     }
     .showcase-container {
-      padding-top: 2rem;
+      padding: 2rem 0;
     }
     .showcase {
       /* width: 100%; */
@@ -109,11 +161,19 @@ import Navbar from "../components/Navbar.astro";
 
       /* width: 90%; */
     }
-    .photo-text-container {
-      display: flex;
-      margin: 0 5% 5rem;
-      justify-content: space-between;
-      height: 50rem;
+    .photo-grid-container {
+      display: grid;
+      grid: auto-flow / 3fr 1fr 3fr;
+      margin: 2rem 5%;
+    }
+    .photo-grid-container-bottom {
+      display: grid;
+      grid: auto-flow / 1.5fr 3fr 3fr;
+      margin: 2rem 5%;
+    }
+    .photo-grid-container > *,
+    .photo-grid-container-bottom > * {
+      border-radius: 40px;
     }
     .text-card {
       display: flex;
@@ -128,8 +188,7 @@ import Navbar from "../components/Navbar.astro";
       color: #000;
     }
     .photo-card-container {
-      flex: 0 0 50%;
-      margin-right: 2rem;
+      /* flex: 0 0 50%; */
       overflow: hidden;
       box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
       /* background-position: center;
@@ -167,12 +226,13 @@ import Navbar from "../components/Navbar.astro";
       margin: 0 5% 5rem;
     }
     .info-button-container {
-      margin-top: 2rem;
+      /* width: 20%; */
+      /* margin-top: 2rem; */
       /* display: flex; */
       padding: 0.8rem;
       /* position: fixed; */
       border-radius: 40px;
-      /* margin-bottom: 10%; */
+      /* margin-left: 50%; */
     }
     .info-button-container > span {
       padding-right: 0.5rem;
@@ -205,76 +265,28 @@ import Navbar from "../components/Navbar.astro";
       transform: scale(1.2);
       transition: 0.3s scale ease-out;
     }
-    .team-header {
-      font-size: 4rem;
-      padding-left: 1rem;
-    }
-    .team-container {
-      margin: 2rem auto 4rem;
-      max-width: 90rem;
-    }
-    .team-cards-container {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 2rem;
-      margin: 0 1rem;
-    }
-    .member-card {
-      flex: 0 1 22%;
-      width: 310px;
-      /* min-height: 445px; */
-      border: 2px solid var(--aces-blue-light);
-      border-radius: 40px;
-      overflow: hidden;
-      background-color: #fff;
-    }
-    .member-img {
-      width: 100%;
-      /* margin-bottom: 1.5rem; */
-      /* box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1); */
-    }
-    .member-nametag {
-      text-align: center;
-      padding: 7% 5%;
-    }
-    span {
-      font-size: 1.2rem;
-    }
-    .big-heading {
-      font-size: 2.5rem;
-      padding: 3rem 0 3rem;
-    }
-    .awards-container {
-      padding: 0 20% 2rem;
-      background-color: var(--aces-blue);
-    }
-    .awards-container > p {
-      font-size: 1.4rem;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      background-color: #fff;
-      box-shadow: 5px 10px 10px hsla(0, 0%, 0%, 0.1);
-    }
 
     @media (max-width: 64em) {
-      .team-cards-container {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 0 5%;
+      .showcase {
+        flex-direction: column;
       }
-      .member-card {
-        flex: 0 1 40%;
+      .showcase > video {
         margin-bottom: 2rem;
       }
-      span {
-        font-size: 1rem;
+      .photo-grid-container {
+        margin-bottom: 0;
+      }
+      .photo-grid-container,
+      .photo-grid-container-bottom {
+        display: flex;
+        flex-direction: column;
       }
     }
 
     @media (max-width: 35em) {
       .flex {
         flex-direction: column;
-        gap: var(--gap, 0.5rem);
+        gap: var(--gap, 2rem);
       }
       .motivated-text {
         margin: 2rem 0;
