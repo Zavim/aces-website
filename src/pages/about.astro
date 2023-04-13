@@ -7,6 +7,10 @@ import jessicka from "/jessicka.png";
 import lashane from "/lashane.png";
 import michael from "/michael.png";
 import pool from "/pool.jpg";
+import group from "/soiGroup.jpg";
+import palace from "/soiPalace.jpg";
+import tennis from "/soiTennis.jpg";
+
 import coke from "/cokeBottle.jpg";
 import largeGroup from "/largeGroup.jpg";
 import dropdown from "/dropdown.svg";
@@ -24,15 +28,22 @@ import MoreInfo from "../components/MoreInfo";
   <main>
     <div class="soi-container" id="soi">
       <h2 class="heading text-center">Summer of Innovation Youth Camps</h2>
-      <div class="photo-text-container">
+      <div class="photo-text-container flex">
         <div class="photo-card-container">
-          <img
-            class="photo-card-img"
-            src={pool}
-            alt="two kids behind a bottle of Coke furiously spurting from the top due to the reaction between Coke and Mentos"
-          />
+          <img class="photo-card-img" src={pool} alt="kids in pool smiling" />
         </div>
         <MoreInfo client:visible />
+      </div>
+    </div>
+    <div class="photo-grid-container flex">
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={group} alt="" />
+      </div>
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={tennis} alt="" />
+      </div>
+      <div class="photo-card-container">
+        <img class="photo-card-img" src={palace} alt="" />
       </div>
     </div>
     <!-- <div class="team-container" id="team">
@@ -167,8 +178,18 @@ import MoreInfo from "../components/MoreInfo";
       flex: 1 0 20%;
       text-align: center;
     }
-    .photo-text-container > * {
+    .photo-text-container > *,
+    .photo-grid-container > * {
       border-radius: 40px;
+    }
+    .photo-grid-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5rem;
+    }
+    .photo-grid-container > .photo-card-container {
+      flex: 0 1 30%;
+      margin: 0;
     }
     .motivated-text {
       display: flex;
@@ -293,7 +314,7 @@ import MoreInfo from "../components/MoreInfo";
       }
     }
 
-    @media (max-width: 64em) {
+    /* @media (max-width: 64em) {
       .photo-text-container {
         height: auto;
       }
@@ -309,49 +330,16 @@ import MoreInfo from "../components/MoreInfo";
       span {
         font-size: 1rem;
       }
-    }
-
-    @media (max-width: 35em) {
-      .flex {
-        flex-direction: column;
-        gap: var(--gap, 0.5rem);
-      }
-      .motivated-text {
-        margin: 2rem 0;
-      }
-      .photo-text-container {
-        flex-direction: column;
-        height: auto;
-        margin-bottom: 2rem;
-      }
-
-      .new-tab-linebreak {
-        display: inline;
-      }
-      .team-header {
-        padding: 0;
-        text-align: center;
-        font-size: 3rem;
-      }
-      .team-cards-container {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: center;
-      }
-      .awards-container {
-        padding: 0 5% 2rem;
-      }
-    }
+    } */
 
     @media (max-width: 64em) {
       .mission-text {
         padding: 1.5rem;
       }
       .photo-text-container {
-        flex-direction: column;
         justify-content: space-between;
         /* height: 48rem; */
-        margin-bottom: 4rem;
+        /* margin-bottom: 2rem; */
       }
       .text-card {
         flex: 0 0 10%;
@@ -371,7 +359,6 @@ import MoreInfo from "../components/MoreInfo";
       }
       .signup-photo-text-container {
         margin: 0 5% 3rem;
-        flex-direction: column;
         height: 55rem;
       }
       .signup-photo-card-container {
@@ -384,13 +371,34 @@ import MoreInfo from "../components/MoreInfo";
     }
 
     @media (max-width: 35em) {
+      .flex {
+        flex-direction: column;
+        gap: var(--gap, 2rem);
+      }
+      .photo-grid-container {
+        height: auto;
+        margin: 0 5% 2rem;
+      }
+      .new-tab-linebreak {
+        display: inline;
+      }
+      .team-header {
+        padding: 0;
+        text-align: center;
+        font-size: 3rem;
+      }
+      .team-cards-container {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      .awards-container {
+        padding: 0 5% 2rem;
+      }
       .mission-container {
         padding: 1rem 1.2rem;
-        flex-direction: column;
         height: auto;
       }
       .photo-text-container {
-        flex-direction: column;
         height: auto;
         margin-bottom: 2rem;
       }
@@ -407,7 +415,6 @@ import MoreInfo from "../components/MoreInfo";
       }
       .rewards-container {
         padding: 0;
-        flex-direction: column;
         flex-wrap: nowrap;
         margin: 2rem 5%;
         align-items: center;
@@ -420,7 +427,6 @@ import MoreInfo from "../components/MoreInfo";
         padding: 0;
       }
       .signup-photo-text-container {
-        flex-direction: column;
         height: auto;
       }
       .signup-photo-card-container {
