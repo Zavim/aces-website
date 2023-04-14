@@ -12,13 +12,8 @@ export default function Topbar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="About Us" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/about#soi">
-                Summer of Innovation
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/about">
-                Community Service
-              </NavDropdown.Item>
+            <NavDropdown title="About" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/about#soi">Activities</NavDropdown.Item>
               <NavDropdown.Item href="/about#team">Our Team</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Media" id="basic-nav-dropdown">
