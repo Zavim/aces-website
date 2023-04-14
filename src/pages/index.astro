@@ -426,7 +426,7 @@ import strength from "../assets/tensileStrength.jpg";
       padding: 3rem 0 3rem;
     }
     .part-transparent {
-      opacity: 0.5;
+      opacity: 0.4;
     }
     .photo-text-container {
       display: flex;
@@ -625,6 +625,12 @@ import strength from "../assets/tensileStrength.jpg";
       transition: 0.1s transform ease-out;
     }
 
+    @media (max-width: 240em) {
+      .spinning-star-right {
+        bottom: -165%;
+      }
+    }
+
     @media (max-width: 64em) {
       .mission-text {
         /* font-size: 1.2rem; */
@@ -655,12 +661,17 @@ import strength from "../assets/tensileStrength.jpg";
         flex: 0 0 40%;
         margin-bottom: 2rem;
       }
+      .spinning-star-right-up {
+        scale: 10;
+        bottom: -50%;
+      }
       .spinning-star {
         scale: 15;
+        bottom: -100%;
       }
       .spinning-star-right {
         scale: 15;
-        bottom: -200%;
+        bottom: -170%;
       }
       .signup-photo-text-container {
         margin: 0 5% 3rem;
@@ -733,6 +744,7 @@ import strength from "../assets/tensileStrength.jpg";
       }
       .spinning-star-right-up {
         scale: 10;
+        bottom: -150%;
       }
       .spinning-star-right {
         scale: 10;
