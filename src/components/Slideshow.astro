@@ -1,8 +1,10 @@
 ---
-import volcano from "/volcano1600.jpg";
-import shirts from "/lorainShirts1600.jpg";
-import fancy from "/fancy1600.jpg";
-import blackShirts from "/blackShirts1800.jpg";
+import { Image } from "@astrojs/image/components";
+
+import volcano from "../assets/volcano1600.jpg";
+import shirts from "../assets/lorainShirts1600.jpg";
+import fancy from "../assets/fancy1600.jpg";
+import blackShirts from "../assets/blackShirts1800.jpg";
 ---
 
 <!DOCTYPE html>
@@ -104,19 +106,19 @@ import blackShirts from "/blackShirts1800.jpg";
   <body>
     <div class="slideshow-container">
       <div class="hidden-slide fade">
-        <img src={volcano} />
+        <Image src={volcano} />
       </div>
 
       <div class="hidden-slide fade">
-        <img style="object-position: 50% 28%;" src={shirts} />
+        <Image style="object-position: 50% 28%;" src={shirts} />
       </div>
 
       <div class="hidden-slide fade">
-        <img src={fancy} />
+        <Image src={fancy} />
       </div>
 
       <div class="hidden-slide fade">
-        <img src={blackShirts} />
+        <Image src={blackShirts} />
       </div>
 
       <div class="dots-container">

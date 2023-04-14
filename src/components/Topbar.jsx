@@ -1,20 +1,13 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import acesLogo from "/ACES-logo-transparent-no-words.png";
-// import acesStar from "../images/ACES-logo-star.png";
 
-export default function Topbar() {
+export default function Topbar(props) {
+  const { logo } = props;
   return (
     <Navbar variant="dark" expand="sm">
       <Container>
-        <Navbar.Brand href="/">
-          <img
-            className="navbar-logo"
-            src={acesLogo}
-            alt="ACES logo (the word aces spelled out with a star as the letter A)"
-          />
-        </Navbar.Brand>
+        <Navbar.Brand href="/">{logo}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

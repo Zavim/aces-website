@@ -1,9 +1,19 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import Topbar from "../components/Topbar.jsx";
+import acesLogo from "../assets/ACES-logo-transparent-no-words.png";
 ---
 
 <!DOCTYPE html>
-<Topbar client:load />
+<Topbar client:load>
+  <Image
+    slot="logo"
+    class="navbar-logo"
+    src={acesLogo}
+    alt="ACES logo (the word aces spelled out with a star as the letter A)"
+  />
+</Topbar>
 <style is:global>
   .navbar {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -15,6 +25,11 @@ import Topbar from "../components/Topbar.jsx";
   .navbar-collapse {
     flex-grow: 0;
   }
+  .navbar-logo {
+    width: 10rem;
+    height: auto;
+  }
+
   .me-auto {
     margin-right: 0 !important;
   }

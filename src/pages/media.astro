@@ -1,13 +1,15 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
-import coke from "/cokeBottle.png";
-import largeGroup from "/largeGroup.jpg";
-import houseInFront from "/houseInFront.jpg";
-import plates from "/plates.jpg";
-import gala from "/gala.jpg";
-import team from "/team.jpeg";
+import coke from "../assets/cokeBottle.png";
+import largeGroup from "../assets/largeGroup.jpg";
+import houseInFront from "../assets/houseInFront.jpg";
+import plates from "../assets/plates.jpg";
+import gala from "../assets/gala.jpg";
+import team from "../assets/team.jpeg";
 ---
 
 <!DOCTYPE html>
@@ -25,13 +27,8 @@ import team from "/team.jpeg";
         <h4 class="text-center">Anti Bullying Video</h4>
       </div>
       <section class="showcase">
-        <video playsinline controls poster="/ACES-logo-star.png">
-          <source src="/outOfDarkness.mp4" type="video/mp4" />
-          <!-- <source src="" type="video/webm" /> -->
-          Sorry, your browser doesn't support HTML video.
-        </video>
-        <video playsinline controls poster="/ACES-logo-star.png">
-          <source src="/outOfDarkness2.m4v" type="video/mp4" />
+        <video playsinline controls poster="src/assets/ACES-logo-star.png">
+          <source src="/src/assets/outOfDarkness2.m4v" type="video/mp4" />
           <!-- <source src="" type="video/webm" /> -->
           Sorry, your browser doesn't support HTML video.
         </video>
@@ -41,24 +38,24 @@ import team from "/team.jpeg";
 
     <div class="photo-grid-container flex">
       <div class="photo-card-container">
-        <img class="photo-card-img" src={largeGroup} alt="" />
+        <Image class="photo-card-img" src={largeGroup} alt="" />
       </div>
       <div class="photo-card-container">
-        <img class="photo-card-img" src={coke} alt="" />
+        <Image class="photo-card-img" src={coke} alt="" />
       </div>
       <div class="photo-card-container">
-        <img class="photo-card-img" src={houseInFront} alt="" />
+        <Image class="photo-card-img" src={houseInFront} alt="" />
       </div>
     </div>
     <div class="photo-grid-container-bottom flex">
       <div class="photo-card-container">
-        <img class="photo-card-img" src={plates} alt="" />
+        <Image class="photo-card-img" src={plates} alt="" />
       </div>
       <div class="photo-card-container">
-        <img class="photo-card-img" src={gala} alt="" />
+        <Image class="photo-card-img" src={gala} alt="" />
       </div>
       <div class="photo-card-container">
-        <img class="photo-card-img" src={team} alt="" />
+        <Image class="photo-card-img" src={team} alt="" />
       </div>
     </div>
 
@@ -67,7 +64,7 @@ import team from "/team.jpeg";
     <div class="flex" style="justify-content:center; margin:2rem 5% 5rem">
       <div class="info-button-container outline">
         <span> Download Article (opens new tab)</span>
-        <a href="/ACESarticle.pdf">
+        <a href="/src/assets/ACESarticle.pdf">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="info-icon download-button"
@@ -139,7 +136,7 @@ import team from "/team.jpeg";
       /* width: 100%; */
       margin: 0 5%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       /* height: 50rem; */
       overflow-y: hidden;
       overflow-x: hidden;

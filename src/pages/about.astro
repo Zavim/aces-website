@@ -1,4 +1,6 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
@@ -6,10 +8,10 @@ import jennifer from "/jennifer.png";
 import jessicka from "/jessicka.png";
 import lashane from "/lashane.png";
 import michael from "/michael.png";
-import pool from "/pool.jpg";
-import group from "/soiGroup.jpg";
-import palace from "/soiPalace.jpg";
-import tennis from "/soiTennis.jpg";
+import pool from "../assets/pool.jpg";
+import group from "../assets/soiGroup.jpg";
+import palace from "../assets/soiPalace.jpg";
+import tennis from "../assets/soiTennis.jpg";
 
 import coke from "/cokeBottle.jpg";
 import largeGroup from "/largeGroup.jpg";
@@ -30,28 +32,28 @@ import MoreInfo from "../components/MoreInfo";
       <h2 class="heading text-center">Summer of Innovation Youth Camps</h2>
       <div class="photo-text-container flex">
         <div class="photo-card-container">
-          <img class="photo-card-img" src={pool} alt="kids in pool smiling" />
+          <Image class="photo-card-img" src={pool} alt="kids in pool smiling" />
         </div>
         <MoreInfo client:visible />
       </div>
     </div>
     <div class="photo-grid-container flex">
       <div class="photo-card-container">
-        <img
+        <Image
           class="photo-card-img"
           src={group}
           alt="group of students is a classroom"
         />
       </div>
       <div class="photo-card-container">
-        <img
+        <Image
           class="photo-card-img"
           src={tennis}
           alt="students and faculty holding a banner that says USTA find yourself in the game"
         />
       </div>
       <div class="photo-card-container">
-        <img
+        <Image
           class="photo-card-img"
           src={palace}
           alt="large group of students in front of a theatre"

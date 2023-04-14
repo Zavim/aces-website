@@ -1,20 +1,17 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
 import RewardsCard from "../components/RewardsCard.jsx";
 
-import paddleBoarding from "/paddleBoarding.jpg";
-import mouseAndCat from "/mouseAndCat1200.jpg";
-import medals from "/medals.svg";
-import suitcase from "/suitcase.svg";
-import partners from "/partners.svg";
-import head from "/head.svg";
-
-import robots from "/robots1200.jpg";
-import serving from "/serving1200.jpg";
-import group from "/group1600.jpg";
-import strength from "/tensileStrength.jpg";
+import paddleBoarding from "../assets/paddleBoarding.jpg";
+import mouseAndCat from "../assets/mouseAndCat1200.jpg";
+import robots from "../assets/robots1200.jpg";
+import serving from "../assets/serving1200.jpg";
+import group from "../assets/group1600.jpg";
+import strength from "../assets/tensileStrength.jpg";
 ---
 
 <!DOCTYPE html>
@@ -22,7 +19,7 @@ import strength from "/tensileStrength.jpg";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
   </head>
   <Navbar />
   <main>
@@ -84,21 +81,32 @@ import strength from "/tensileStrength.jpg";
         </p>
       </div>
       <div class="photo-card-container">
-        <img
+        <Image
           class="photo-card-img"
           src={paddleBoarding}
           alt="students paddle boarding on a lake as the sun sets"
         />
+        <!-- <img
+          class="photo-card-img"
+          src={paddleBoarding}
+          alt="students paddle boarding on a lake as the sun sets"
+        /> -->
       </div>
     </div>
     <div class="rewards-container">
       <RewardsCard client:visible>
-        <img
+        <Image
           class="photo-card-img part-transparent"
           slot="icon"
           src={robots}
           alt="students in classroom looking at robots and blocks on the floor"
         />
+        <!-- <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={robots}
+          alt="students in classroom looking at robots and blocks on the floor"
+        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="rewards-icon"
@@ -117,12 +125,18 @@ import strength from "/tensileStrength.jpg";
         </p>
       </RewardsCard>
       <RewardsCard client:visible>
-        <img
+        <Image
           class="photo-card-img part-transparent"
           slot="icon"
           src={serving}
           alt="ACES student serving dinner to two elderly people"
         />
+        <!-- <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={serving}
+          alt="ACES student serving dinner to two elderly people"
+        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"
@@ -145,12 +159,18 @@ import strength from "/tensileStrength.jpg";
         </p>
       </RewardsCard>
       <RewardsCard client:visible>
-        <img
+        <Image
           class="photo-card-img part-transparent"
           slot="icon"
           src={group}
           alt="group picture of ACES students and employees"
         />
+        <!-- <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={group}
+          alt="group picture of ACES students and employees"
+        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"
@@ -170,12 +190,18 @@ import strength from "/tensileStrength.jpg";
         </p>
       </RewardsCard>
       <RewardsCard client:visible>
-        <img
+        <Image
           class="photo-card-img part-transparent"
           slot="icon"
           src={strength}
           alt="group picture of ACES students and employees"
         />
+        <!-- <img
+          class="photo-card-img part-transparent"
+          slot="icon"
+          src={strength}
+          alt="group picture of ACES students and employees"
+        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"
@@ -258,11 +284,16 @@ import strength from "/tensileStrength.jpg";
 
     <div class="signup-photo-text-container">
       <div class="signup-photo-card-container">
-        <img
+        <Image
           class="photo-card-img"
           src={mouseAndCat}
           alt="children in front of two people costumed, one as a cat and the other, a mouse"
         />
+        <!-- <img
+          class="photo-card-img"
+          src={mouseAndCat}
+          alt="children in front of two people costumed, one as a cat and the other, a mouse"
+        /> -->
       </div>
       <div class="motivated-text blurb blue-fill">
         <div>
@@ -329,9 +360,6 @@ import strength from "/tensileStrength.jpg";
       background-color: var(--aces-blue);
       color: #fff;
     }
-    .part-transparent {
-      opacity: 0.5;
-    }
     /* .container {
       position: relative;
       width: 100%;
@@ -367,6 +395,9 @@ import strength from "/tensileStrength.jpg";
     .big-heading {
       font-size: 2.5rem;
       padding: 3rem 0 3rem;
+    }
+    .part-transparent {
+      opacity: 0.5;
     }
     .photo-text-container {
       display: flex;
@@ -531,7 +562,7 @@ import strength from "/tensileStrength.jpg";
       /* background-color: var(--aces-blue); */
       background-color: var(--aces-blue-dark);
       padding: 1rem 2rem;
-      margin: 1rem 0;
+      margin: 0;
       box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
     }
     .signup:hover {
