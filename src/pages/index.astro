@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 
+import LaxAnimController from "../components/LaxAnimController";
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
@@ -21,6 +22,7 @@ import strength from "../assets/tensileStrength.jpg";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
   </head>
+  <LaxAnimController client:load />
   <Navbar />
   <main>
     <Slideshow />
@@ -326,6 +328,33 @@ import strength from "../assets/tensileStrength.jpg";
         <div><button class="signup">Sign Up!</button></div>
       </div> -->
     </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="48"
+      viewBox="0 96 960 960"
+      class="spinning-star"
+      ><path
+        d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+      ></path></svg
+    >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="48"
+      viewBox="0 96 960 960"
+      class="spinning-star-right-up"
+      ><path
+        d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+      ></path></svg
+    >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="48"
+      viewBox="0 96 960 960"
+      class="spinning-star-right"
+      ><path
+        d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+      ></path></svg
+    >
   </main>
   <Footer />
   <style is:global>
@@ -525,6 +554,30 @@ import strength from "../assets/tensileStrength.jpg";
       /* -ms-transform: translate(-50%, -50%); */
       /* padding-top: 2rem; */
     }
+    .spinning-star {
+      fill: var(--aces-blue);
+      position: absolute;
+      left: -2.5%;
+      bottom: -160%;
+      scale: 20;
+      z-index: -1;
+    }
+    .spinning-star-right-up {
+      fill: var(--aces-blue);
+      position: absolute;
+      right: 8%;
+      bottom: -120%;
+      scale: 10;
+      z-index: -1;
+    }
+    .spinning-star-right {
+      fill: var(--aces-blue-dark);
+      position: absolute;
+      right: 0%;
+      bottom: -230%;
+      scale: 20;
+      z-index: -1;
+    }
     .motivated-text {
       display: flex;
       flex-direction: column;
@@ -602,6 +655,13 @@ import strength from "../assets/tensileStrength.jpg";
         flex: 0 0 40%;
         margin-bottom: 2rem;
       }
+      .spinning-star {
+        scale: 15;
+      }
+      .spinning-star-right {
+        scale: 15;
+        bottom: -200%;
+      }
       .signup-photo-text-container {
         margin: 0 5% 3rem;
         flex-direction: column;
@@ -666,6 +726,17 @@ import strength from "../assets/tensileStrength.jpg";
       }
       .rewards-icon {
         padding: 0;
+      }
+      .spinning-star {
+        scale: 10;
+        bottom: -200%;
+      }
+      .spinning-star-right-up {
+        scale: 10;
+      }
+      .spinning-star-right {
+        scale: 10;
+        bottom: -300%;
       }
       .signup-photo-text-container {
         flex-direction: column;
