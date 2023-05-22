@@ -1,7 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 
-import LaxAnimController from "../components/LaxAnimController";
+// import LaxAnimController from "../components/LaxAnimController";
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
@@ -22,7 +22,7 @@ import strength from "../assets/tensileStrength.jpg";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
   </head>
-  <LaxAnimController client:load />
+  <!-- <LaxAnimController client:load /> -->
   <Navbar />
   <main>
     <Slideshow />
@@ -328,7 +328,7 @@ import strength from "../assets/tensileStrength.jpg";
         <div><button class="signup">Sign Up!</button></div>
       </div> -->
     </div>
-    <!-- <svg
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       height="48"
       viewBox="0 96 960 960"
@@ -354,7 +354,7 @@ import strength from "../assets/tensileStrength.jpg";
       ><path
         d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
       ></path></svg
-    > -->
+    >
   </main>
   <Footer />
   <style is:global>
@@ -558,10 +558,12 @@ import strength from "../assets/tensileStrength.jpg";
     .spinning-star {
       fill: var(--aces-blue);
       position: absolute;
-      left: -2.5%;
+      left: 2.5%;
       bottom: -160%;
       scale: 20;
       z-index: -1;
+      opacity: 70%;
+      rotate: -60deg;
     }
     .spinning-star-right-up {
       fill: var(--aces-blue);
@@ -570,14 +572,17 @@ import strength from "../assets/tensileStrength.jpg";
       bottom: -120%;
       scale: 10;
       z-index: -1;
+      opacity: 70%;
     }
     .spinning-star-right {
       fill: var(--aces-blue-dark);
       position: absolute;
       right: 0%;
-      bottom: -230%;
+      bottom: -100%;
       scale: 20;
       z-index: -1;
+      opacity: 70%;
+      rotate: 40deg;
     }
     .motivated-text {
       display: flex;
@@ -628,7 +633,7 @@ import strength from "../assets/tensileStrength.jpg";
 
     @media (max-width: 240em) {
       .spinning-star-right {
-        bottom: -165%;
+        bottom: -220%;
       }
     }
 
