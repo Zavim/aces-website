@@ -18,8 +18,8 @@ export default function MoreInfo() {
             grades 2nd – 7th!
           </p>
           <p>
-            The Summer of Innovation is eight (8) weeks, four (4) days per week,
-            of <strong>STE(A)M</strong> (<strong>S</strong>
+            The Summer of Innovation is 8 weeks (4 days per week) of{" "}
+            <strong>STE(A)M</strong> (<strong>S</strong>
             cience, <strong>T</strong>
             echnology, <strong>E</strong>
             ngineering [<strong>A</strong>rts] and <strong>M</strong>
