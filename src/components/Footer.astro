@@ -1,15 +1,15 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
-import acesLogoWords from "../assets/ACES-logo-transparent.png";
+import acesLogoWords from "../images/ACES-logo-transparent.png";
 ---
 
 <footer>
   <div class="logo-container">
     <Image
-      class="logo"
-      src={acesLogoWords}
-      alt="ACES -- achievement through community education and support"
+    src={acesLogoWords}
+    alt="ACES -- achievement through community education and support"
+    class="logo"
     />
   </div>
 </footer>
