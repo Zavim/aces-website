@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 // import LaxAnimController from "../components/LaxAnimController";
 import Navbar from "../components/Navbar.astro";
@@ -7,12 +7,12 @@ import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
 import RewardsCard from "../components/RewardsCard.jsx";
 
-import paddleBoarding from "../assets/paddleBoarding.jpg";
-import mouseAndCat from "../assets/mouseAndCat1200.jpg";
-import robots from "../assets/robots1200.jpg";
-import serving from "../assets/serving1200.jpg";
-import group from "../assets/group1600.jpg";
-import strength from "../assets/tensileStrength.jpg";
+import paddleBoarding from "../images/paddleBoarding.jpg";
+import mouseAndCat from "../images/mouseAndCat1200.jpg";
+import robots from "../images/robots1200.jpg";
+import serving from "../images/serving1200.jpg";
+import group from "../images/group1600.jpg";
+import strength from "../images/tensileStrength.jpg";
 ---
 
 <!DOCTYPE html>
@@ -45,25 +45,6 @@ import strength from "../assets/tensileStrength.jpg";
         <strong>Our program runs year-round.</strong>
       </p>
     </div>
-    <!-- <div class="mission-text blurb outline">
-      <h2 style="padding-bottom: 1rem;">
-        Achievement through Community Education & Support (ACES)
-      </h2>
-      <p>
-        We are a fun-focused high school mentoring program. <br /><span>
-          We help 9th-12th grade Lorain High School/Success Academy students
-          accept and successfully navigate a series of challenges.
-        </span>
-        <br />
-        <span
-          >The students develop inherent skills to overcome barriers hindering
-          educational, social, emotional and career growth.</span
-        >
-        <br />
-        <br />
-        <strong>Our program runs yearly from July 1st – June 30th</strong>
-      </p>
-    </div> -->
 
     <div class="photo-text-container">
       <div class="text-card">
@@ -84,31 +65,20 @@ import strength from "../assets/tensileStrength.jpg";
       </div>
       <div class="photo-card-container">
         <Image
-          class="photo-card-img"
-          src={paddleBoarding}
-          alt="students paddle boarding on a lake as the sun sets"
+        src={paddleBoarding}
+        alt="students paddleboarding on a lake as the sun sets"
+        class="photo-card-img"
         />
-        <!-- <img
-          class="photo-card-img"
-          src={paddleBoarding}
-          alt="students paddle boarding on a lake as the sun sets"
-        /> -->
       </div>
     </div>
     <div class="rewards-container">
       <RewardsCard client:visible>
         <Image
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={robots}
-          alt="students in classroom looking at robots and blocks on the floor"
+        src={robots}
+        alt="students in classroom looking at robots and blocks on the floor"
+        class="photo-card-img part-transparent"
+        slot="icon"
         />
-        <!-- <img
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={robots}
-          alt="students in classroom looking at robots and blocks on the floor"
-        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="rewards-icon"
@@ -120,7 +90,6 @@ import strength from "../assets/tensileStrength.jpg";
             d="M24 41q4.15 0 7.075-2.925T34 31q0-4.15-2.925-7.075T24 21q-4.15 0-7.075 2.925T14 31q0 4.15 2.925 7.075T24 41Zm-6.7-21.15q1.4-.85 3-1.325T23.65 18l-5.5-11h-7.3Zm13.4 0L37.15 7h-7.3l-5.5 11q1.75.05 3.35.525 1.6.475 3 1.325Zm-17.05 19q-1.25-1.65-1.95-3.625T11 31q0-2.25.7-4.225.7-1.975 1.95-3.625-2.85.5-4.75 2.675T7 31q0 3 1.9 5.175t4.75 2.675Zm20.7 0q2.85-.5 4.75-2.675T41 31q0-3-1.9-5.175t-4.75-2.675q1.25 1.65 1.95 3.625T37 31q0 2.25-.7 4.225-.7 1.975-1.95 3.625ZM24 44q-2 0-3.825-.575-1.825-.575-3.375-1.575-.45.1-.9.125-.45.025-.95.025-4.55 0-7.75-3.2T4 31.05q0-4.35 2.9-7.45 2.9-3.1 7.15-3.45L6 4h14l4 8 4-8h14l-8 16.05q4.25.4 7.125 3.5T44 31q0 4.6-3.2 7.8T33 42q-.45 0-.925-.025-.475-.025-.925-.125-1.55 1-3.35 1.575T24 44Zm0-13Zm-6.7-11.15L10.85 7l6.45 12.85Zm13.4 0L37.15 7ZM24 36l-1.55-3.45L19 31l3.45-1.55L24 26l1.55 3.45L29 31l-3.45 1.55Z"
           ></path></svg
         >
-        <!-- </div> -->
         <p slot="content" class="rewards-card-text">
           Students experience their power through the successful completion of
           challenges that generate rewards and incentives.
@@ -133,12 +102,6 @@ import strength from "../assets/tensileStrength.jpg";
           src={serving}
           alt="ACES student serving dinner to two elderly people"
         />
-        <!-- <img
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={serving}
-          alt="ACES student serving dinner to two elderly people"
-        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"
@@ -152,7 +115,6 @@ import strength from "../assets/tensileStrength.jpg";
             d="M140 936q-24 0-42-18t-18-42V396q0-24 18-42t42-18h180V236q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680V396H140v480Zm240-540h200V236H380v100ZM140 876V396v480Z"
           ></path></svg
         >
-        <!-- <img slot="icon" class="rewards-icon" src={suitcase} alt="" /> -->
         <p slot="content" class="rewards-card-text">
           Community service challenges are converted into employment
           opportunities when organizations like <br />
@@ -167,12 +129,6 @@ import strength from "../assets/tensileStrength.jpg";
           src={group}
           alt="group picture of ACES students and employees"
         />
-        <!-- <img
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={group}
-          alt="group picture of ACES students and employees"
-        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"
@@ -198,12 +154,6 @@ import strength from "../assets/tensileStrength.jpg";
           src={strength}
           alt="group picture of ACES students and employees"
         />
-        <!-- <img
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={strength}
-          alt="group picture of ACES students and employees"
-        /> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"
@@ -225,65 +175,6 @@ import strength from "../assets/tensileStrength.jpg";
       </RewardsCard>
     </div>
 
-    <!-- <div class="rewards-card">
-        <p>
-          Students experience their power through the successful completion of
-          challenges that generate rewards and incentives.
-        </p>
-        <img class="rewards-icon" src={medals} alt="a stack of medals" />
-      </div>
-      <div class="rewards-card">
-        <p>
-          Community service challenges are converted into employment
-          opportunities when organizations like <br /><a
-            href="https://ohiomeansjobs.ohio.gov/home/">Ohio Means Jobs</a
-          > interview students in May.
-        </p>
-        <img class="rewards-icon" src={suitcase} alt="a stack of medals" />
-      </div>
-      <div class="rewards-card">
-        <p>
-          Students form new relationships with Lorain County businesses and grow
-          their entrepreneurship skills through positive reinforcement.
-        </p>
-        <img class="rewards-icon" src={partners} alt="a stack of medals" />
-      </div>
-      <div class="rewards-card">
-        <p>
-          Students will realize that personal progress can be acquired through
-          leadership training, proper mindset, college prep and community
-          service.
-        </p>
-        <img class="rewards-icon" src={head} alt="a stack of medals" />
-      </div> -->
-    <!-- <p>
-        Our goal is to motivate Students to want to meet outside of school for
-        two or more days per week to include fieldtrips for a total of 10 hours
-        each week, rides to/from included (this would be in addition to any in
-        school hours of training requested by the LCSD – currently 5-25 per
-        week). Meeting hours will be after school on Thursdays (2:30pm-5:30pm)
-        at Lorain High School and 11am-4pm on Saturdays which will include
-        community service projects and fieldtrips. Transportation will be
-        provided to all locations where training will take place for those
-        without transportation access. ACES Students will also attend unique
-        fieldtrips, college visits, experience adventures and new opportunities,
-        and will each be provided with new resumes and cover letters that will
-        assist in securing part-time employment in the summer and throughout the
-        following year. Participants will acquire communication, social
-        development, problem solving, leadership and decision-making skills
-        while having fun racing go-carts, swimming, kayaking, archery, bowling
-        and many other activities they will enjoy. The ACES program will provide
-        challenges whose successful completion will lead to informed choices on
-        selecting a future college, preparing for a career and utilizing service
-        learning and other community impact projects to position themselves for
-        future employment success. Students demonstrating progress will also
-        plan and host special events (Café Nights, STEM Camps for 2nd thru 7th
-        graders, festivals, etc.) which will greatly enhance their portfolios
-        and confidence. Participants must continue to improve
-        academically/behaviorally at their school and complete personal
-        obligations at home to remain in the program.
-      </p> -->
-
     <div class="signup-photo-text-container">
       <div class="signup-photo-card-container">
         <Image
@@ -291,11 +182,6 @@ import strength from "../assets/tensileStrength.jpg";
           src={mouseAndCat}
           alt="children in front of two people costumed, one as a cat and the other, a mouse"
         />
-        <!-- <img
-          class="photo-card-img"
-          src={mouseAndCat}
-          alt="children in front of two people costumed, one as a cat and the other, a mouse"
-        /> -->
       </div>
       <div class="motivated-text blurb blue-fill">
         <div>
@@ -305,29 +191,15 @@ import strength from "../assets/tensileStrength.jpg";
             <li>Attend school regularly</li>
             <li>Participate in after-school tutoring</li>
             <li>
-              Avoid behaviors that lead to negative referrals and suspensions
+              Avoid behaviors that lead to negative referrals <br> and suspensions
             </li>
             <li>Contemplate a more positive future</li>
           </ul>
         </div>
-        <div><button class="signup">Sign Up!</button></div>
+      <button class="signup">Sign Up!</button>
       </div>
-      <!-- <div class="motivated-text blurb outline">
-        <div>
-          <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
-          <ul class="rewards-list">
-            <li>Improve/maintain academic performance</li>
-            <li>Attend school regularly</li>
-            <li>Participate in after-school tutoring</li>
-            <li>
-              Avoid behaviors that lead to negative referrals and suspensions
-            </li>
-            <li>Contemplate a more positive future</li>
-          </ul>
-        </div>
-        <div><button class="signup">Sign Up!</button></div>
-      </div> -->
     </div>
+
     <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
       height="48"
@@ -416,7 +288,7 @@ import strength from "../assets/tensileStrength.jpg";
       color: #fff;
     } */
     .blurb {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
     .heading {
       font-size: 1.5rem;
@@ -459,7 +331,7 @@ import strength from "../assets/tensileStrength.jpg";
       padding-bottom: 1.5rem;
     }
     .text-card > p {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       /* font-weight: 500; */
     }
     .photo-card-container {
@@ -489,7 +361,7 @@ import strength from "../assets/tensileStrength.jpg";
       color: var(--aces-blue-dark);
     }
     .rewards-list {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       padding-top: 1rem;
       list-style-type: "★";
       margin-bottom: 1rem;
@@ -535,7 +407,7 @@ import strength from "../assets/tensileStrength.jpg";
       box-shadow: 5px 10px 15px hsla(0, 0%, 0%, 0.1);
     }
     .rewards-card-text {
-      font-size: 1.5rem;
+      /* font-size: 1.25rem; */
     }
     .rewards-card.icon-side {
       padding: 0;
@@ -586,6 +458,7 @@ import strength from "../assets/tensileStrength.jpg";
     }
     .motivated-text {
       display: flex;
+      flex: .75 0 25%;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
@@ -607,7 +480,7 @@ import strength from "../assets/tensileStrength.jpg";
       height: fit-content;
     }
     .signup-photo-card-container {
-      flex: 0 0 40%;
+      flex: .25 0 25%;
       overflow: hidden;
       box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
       margin-right: 1rem;
@@ -615,6 +488,8 @@ import strength from "../assets/tensileStrength.jpg";
       background-size: cover; */
     }
     .signup {
+      /* position: relative;
+      right: -100%; */
       border: none;
       border-radius: 40px;
       color: #fff;

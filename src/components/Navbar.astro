@@ -1,17 +1,17 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 import Topbar from "../components/Topbar.jsx";
-import acesLogo from "../assets/ACES-logo-transparent-no-words.png";
+import acesLogo from "../images/ACES-logo-transparent-no-words.png";
 ---
 
 <!DOCTYPE html>
 <Topbar client:load>
   <Image
-    slot="logo"
-    class="navbar-logo"
-    src={acesLogo}
-    alt="ACES logo (the word aces spelled out with a star as the letter A)"
+  src={acesLogo}
+  alt="ACES logo (the word aces spelled out with a star as the letter A)"
+  class="navbar-logo"
+  slot="logo"
   />
 </Topbar>
 <style is:global>
