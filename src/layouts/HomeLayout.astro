@@ -1,16 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import { Content as PhotoText } from "../components/about.mdx";
 
 // import LaxAnimController from "../components/LaxAnimController";
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
 import RewardsCard from "../components/RewardsCard.jsx";
-
-import BlueBoxLayout from "../layouts/BlueBoxLayout.astro";
-import AboutACESLayout from "../layouts/AboutACESLayout.astro";
-import MotivatedLayout from "../layouts/MotivatedLayout.astro";
 
 import paddleBoarding from "../images/paddleBoarding.jpg";
 import mouseAndCat from "../images/mouseAndCat1200.jpg";
@@ -27,15 +22,32 @@ import strength from "../images/tensileStrength.jpg";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
   </head>
-  <!-- <LaxAnimController client:load /> -->
   <Navbar />
   <main>
     <Slideshow />
-    <BlueBoxLayout />
-    <AboutACESLayout />
-    <!-- <div class="photo-text-container">
+    <div class="mission-text blurb blue-fill">
+      <slot />
+      <!-- <h2 style="padding-bottom: 1rem;">
+        Achievement through Community Education & Support (ACES)
+      </h2> -->
+      <!-- <p>
+        We are a fun-focused high school mentoring program. <br /><span>
+          We help 9th-12th grade Lorain High School/Success Academy students
+          accept and successfully navigate a series of challenges.
+        </span>
+        <br />
+        <span
+          >The students develop inherent skills to overcome barriers hindering
+          educational, social, emotional and career growth.</span
+        >
+        <br />
+        <br />
+        <strong>Our program runs year-round.</strong>
+      </p> -->
+    </div>
+
+    <div class="photo-text-container">
       <div class="text-card">
-        <PhotoText />
         <h2>About the ACES Program</h2>
         <p>
           Students will complete group and individual challenges, learning to
@@ -58,8 +70,7 @@ import strength from "../images/tensileStrength.jpg";
           class="photo-card-img"
         />
       </div>
-    </div> -->
-
+    </div>
     <div class="rewards-container">
       <RewardsCard client:visible>
         <Image
@@ -174,8 +185,7 @@ import strength from "../images/tensileStrength.jpg";
       </div>
       <div class="motivated-text blurb blue-fill">
         <div>
-          <MotivatedLayout />
-          <!-- <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
+          <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
           <ul class="rewards-list">
             <li>Improve/maintain academic performance</li>
             <li>Attend school regularly</li>
@@ -185,7 +195,7 @@ import strength from "../images/tensileStrength.jpg";
               suspensions
             </li>
             <li>Contemplate a more positive future</li>
-          </ul> -->
+          </ul>
         </div>
         <button class="signup">Sign Up!</button>
       </div>

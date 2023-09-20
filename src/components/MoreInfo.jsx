@@ -18,16 +18,15 @@ export default function MoreInfo() {
             grades 2nd – 7th!
           </p>
           <p>
-            The Summer of Innovation is 8 weeks (4 days per week) of{" "}
-            <strong>STE(A)M</strong> (<strong>S</strong>
+            The Summer of Innovation is 8 weeks (4 days per week) of journeys
+            focused on <strong>STE(A)M</strong> -- <strong>S</strong>
             cience, <strong>T</strong>
             echnology, <strong>E</strong>
-            ngineering [<strong>A</strong>rts] and <strong>M</strong>
-            ath) focused journeys. Every Thursday serves as a Music, Arts, or
-            game day.
+            ngineering (<strong>A</strong>rts) and <strong>M</strong>
+            ath.
           </p>
           <p>
-            Most activities will take place primarily at{" "}
+            Activities will primarily take place at{" "}
             <strong>Greater Victory Church - 559 Reid Avenue, Lorain OH</strong>
             <br />
             11:00am - 3:00pm, Mon - Thurs <br /> (kids can be dropped off

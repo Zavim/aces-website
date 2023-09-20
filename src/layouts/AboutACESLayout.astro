@@ -1,226 +1,25 @@
 ---
-import { Image } from "astro:assets";
 import { Content as PhotoText } from "../components/about.mdx";
-
-// import LaxAnimController from "../components/LaxAnimController";
-import Navbar from "../components/Navbar.astro";
-import Slideshow from "../components/Slideshow.astro";
-import Footer from "../components/Footer.astro";
-import RewardsCard from "../components/RewardsCard.jsx";
-
-import BlueBoxLayout from "../layouts/BlueBoxLayout.astro";
-import AboutACESLayout from "../layouts/AboutACESLayout.astro";
-import MotivatedLayout from "../layouts/MotivatedLayout.astro";
+import { Image } from "astro:assets";
 
 import paddleBoarding from "../images/paddleBoarding.jpg";
-import mouseAndCat from "../images/mouseAndCat1200.jpg";
-import robots from "../images/robots1200.jpg";
-import serving from "../images/serving1200.jpg";
-import group from "../images/group1600.jpg";
-import strength from "../images/tensileStrength.jpg";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
-  </head>
-  <!-- <LaxAnimController client:load /> -->
-  <Navbar />
-  <main>
-    <Slideshow />
-    <BlueBoxLayout />
-    <AboutACESLayout />
-    <!-- <div class="photo-text-container">
-      <div class="text-card">
-        <PhotoText />
-        <h2>About the ACES Program</h2>
-        <p>
-          Students will complete group and individual challenges, learning to
-          control emotions and behaviors that could ultimately hinder their
-          academic and social progress. <br />
-
-          <br /> They are taught how to implement this new-found control to
-          reach short/long term goals via hands-on, goal oriented, role playing,
-          critical thinking scenarios and community service.
-          <br />
-
-          <br /> The ACES program empowers students to experiment and adopt
-          behaviors that generate positive results.
-        </p>
-      </div>
-      <div class="photo-card-container">
-        <Image
-          src={paddleBoarding}
-          alt="students paddleboarding on a lake as the sun sets"
-          class="photo-card-img"
-        />
-      </div>
-    </div> -->
-
-    <div class="rewards-container">
-      <RewardsCard client:visible>
-        <Image
-          src={robots}
-          alt="students in classroom looking at robots and blocks on the floor"
-          class="photo-card-img part-transparent"
-          slot="icon"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="rewards-icon"
-          height="48"
-          width="48"
-          slot="icon"
-          fill="#fff"
-          ><path
-            d="M24 41q4.15 0 7.075-2.925T34 31q0-4.15-2.925-7.075T24 21q-4.15 0-7.075 2.925T14 31q0 4.15 2.925 7.075T24 41Zm-6.7-21.15q1.4-.85 3-1.325T23.65 18l-5.5-11h-7.3Zm13.4 0L37.15 7h-7.3l-5.5 11q1.75.05 3.35.525 1.6.475 3 1.325Zm-17.05 19q-1.25-1.65-1.95-3.625T11 31q0-2.25.7-4.225.7-1.975 1.95-3.625-2.85.5-4.75 2.675T7 31q0 3 1.9 5.175t4.75 2.675Zm20.7 0q2.85-.5 4.75-2.675T41 31q0-3-1.9-5.175t-4.75-2.675q1.25 1.65 1.95 3.625T37 31q0 2.25-.7 4.225-.7 1.975-1.95 3.625ZM24 44q-2 0-3.825-.575-1.825-.575-3.375-1.575-.45.1-.9.125-.45.025-.95.025-4.55 0-7.75-3.2T4 31.05q0-4.35 2.9-7.45 2.9-3.1 7.15-3.45L6 4h14l4 8 4-8h14l-8 16.05q4.25.4 7.125 3.5T44 31q0 4.6-3.2 7.8T33 42q-.45 0-.925-.025-.475-.025-.925-.125-1.55 1-3.35 1.575T24 44Zm0-13Zm-6.7-11.15L10.85 7l6.45 12.85Zm13.4 0L37.15 7ZM24 36l-1.55-3.45L19 31l3.45-1.55L24 26l1.55 3.45L29 31l-3.45 1.55Z"
-          ></path></svg
-        >
-        <p slot="content" class="rewards-card-text">
-          Students experience their power through the successful completion of
-          challenges that generate rewards and incentives.
-        </p>
-      </RewardsCard>
-      <RewardsCard client:visible>
-        <Image
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={serving}
-          alt="ACES student serving dinner to two elderly people"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          viewBox="0 96 960 960"
-          width="48"
-          class="rewards-icon"
-          slot="icon"
-          stroke="#fff"
-          fill="#fff"
-          ><path
-            d="M140 936q-24 0-42-18t-18-42V396q0-24 18-42t42-18h180V236q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680V396H140v480Zm240-540h200V236H380v100ZM140 876V396v480Z"
-          ></path></svg
-        >
-        <p slot="content" class="rewards-card-text">
-          Community service challenges are converted into employment
-          opportunities when organizations like <br />
-          <a href="https://ohiomeansjobs.ohio.gov/home/">Ohio Means Jobs</a>
-           interview students in May.
-        </p>
-      </RewardsCard>
-      <RewardsCard client:visible>
-        <Image
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={group}
-          alt="group picture of ACES students and employees"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          viewBox="0 96 960 960"
-          width="48"
-          class="rewards-icon"
-          slot="icon"
-          stroke="#fff"
-          fill="#fff"
-          ><path
-            d="m540 652-27-61-61-27 61-27 27-61 27 61 61 27-61 27-27 61ZM420 432l-40-88-88-40 88-40 40-88 40 88 88 40-88 40-40 88ZM40 896V736q0-29 20.5-49.5T110 666h141q17 0 32.5 8.5T310 698q29 42 74 65t96 23q51 0 96-23t75-65q11-15 26-23.5t32-8.5h141q29 0 49.5 20.5T920 736v160H660V777q-36 33-82.5 51T480 846q-51 0-97-18t-83-51v119H40Zm120-300q-45 0-77.5-32.5T50 486q0-46 32.5-78t77.5-32q46 0 78 32t32 78q0 45-32 77.5T160 596Zm640 0q-45 0-77.5-32.5T690 486q0-46 32.5-78t77.5-32q46 0 78 32t32 78q0 45-32 77.5T800 596Z"
-          ></path></svg
-        >
-        <p slot="content" class="rewards-card-text">
-          Students form new relationships with Lorain County businesses and grow
-          their entrepreneurship skills through positive reinforcement.
-        </p>
-      </RewardsCard>
-      <RewardsCard client:visible>
-        <Image
-          class="photo-card-img part-transparent"
-          slot="icon"
-          src={strength}
-          alt="group picture of ACES students and employees"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          viewBox="0 96 960 960"
-          width="48"
-          class="rewards-icon"
-          slot="icon"
-          stroke="#fff"
-          fill="#fff"
-          ><path
-            d="M490.74 707Q557 707 603 664.922T649 563q0-52-33.58-89T534 437q-42 0-72 27.5t-30 66.611Q432 548 438.5 564q6.5 16 19.5 30l44-42q-5-3.5-7.5-8.75T492 532q0-14 11-24t31-10q23 0 39.5 18.5T590 564q0 35.189-28 59.595Q534 648 492 648q-51.196 0-86.598-40.5T370 507.417Q370 476 381.5 448t33.5-50l-43-43q-30 29-46.5 68.284-16.5 39.283-16.5 82.4Q309 590 362.008 648.5 415.015 707 490.74 707ZM240 976V804q-57-52-88.5-121.5T120 536q0-150 105-255t255-105q125 0 221.5 73.5T827 441l55 218q4 14-5 25.5T853 696h-93v140q0 24.75-17.625 42.375T700 896H600v80h-60V836h160V636h114l-45-180q-24-97-105-158.5T480 236q-125 0-212.5 86.5T180 533.54q0 64.417 26.324 122.392Q232.649 713.908 281 759l19 18v199h-60Zm257-370Z"
-          ></path></svg
-        >
-        <p slot="content" class="rewards-card-text">
-          Students will realize that personal progress can be acquired through
-          leadership training, proper mindset, college prep and community
-          service.
-        </p>
-      </RewardsCard>
+<html>
+  <div class="photo-text-container">
+    <div class="text-card">
+      <PhotoText />
     </div>
-
-    <div class="signup-photo-text-container">
-      <div class="signup-photo-card-container">
-        <Image
-          class="photo-card-img"
-          src={mouseAndCat}
-          alt="children in front of two people costumed, one as a cat and the other, a mouse"
-        />
-      </div>
-      <div class="motivated-text blurb blue-fill">
-        <div>
-          <MotivatedLayout />
-          <!-- <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
-          <ul class="rewards-list">
-            <li>Improve/maintain academic performance</li>
-            <li>Attend school regularly</li>
-            <li>Participate in after-school tutoring</li>
-            <li>
-              Avoid behaviors that lead to negative referrals <br /> and
-              suspensions
-            </li>
-            <li>Contemplate a more positive future</li>
-          </ul> -->
-        </div>
-        <button class="signup">Sign Up!</button>
-      </div>
+    <div class="photo-card-container">
+      <Image
+        src={paddleBoarding}
+        alt="students paddleboarding on a lake as the sun sets"
+        class="photo-card-img"
+      />
     </div>
+  </div>
 
-    <!-- <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="48"
-      viewBox="0 96 960 960"
-      class="spinning-star"
-      ><path
-        d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-      ></path></svg
-    >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="48"
-      viewBox="0 96 960 960"
-      class="spinning-star-right-up"
-      ><path
-        d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-      ></path></svg
-    >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="48"
-      viewBox="0 96 960 960"
-      class="spinning-star-right"
-      ><path
-        d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-      ></path></svg
-    > -->
-  </main>
-  <Footer />
-  <style is:global>
+  <style>
     main {
       overflow-x: hidden;
     }
