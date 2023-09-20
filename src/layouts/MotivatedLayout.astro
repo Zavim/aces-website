@@ -1,0 +1,61 @@
+---
+import { Content as Motivated } from "../components/motivated.mdx";
+---
+
+<html>
+  <div class="motivated-text blurb blue-fill">
+    <Motivated />
+  </div>
+
+  <style is:global>
+    .blue-fill {
+      background-color: var(--aces-blue);
+      color: #fff;
+    }
+    .motivated-text {
+      display: flex;
+      flex: 0.75 0 25%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 2rem 2rem;
+      border-radius: 40px;
+    }
+    .blurb {
+      font-size: 1.25rem;
+    }
+    ul {
+      font-size: 1.25rem;
+      padding-top: 1rem;
+      list-style-type: "★";
+      margin-bottom: 1rem;
+    }
+    li {
+      padding: 0.5rem 0 0 1rem;
+    }
+    li::marker {
+      color: var(--aces-blue-dark);
+    }
+    li::marker:hover {
+      rotate: 60deg;
+    }
+
+    @media (max-width: 64em) {
+      ul {
+        padding-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 35em) {
+      .motivated-text {
+        padding: 1.5rem;
+        font-size: 1.2rem;
+      }
+      ul {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+
+
+</html>

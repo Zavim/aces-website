@@ -1,0 +1,40 @@
+---
+import { Content as BlueBox } from "../components/blueBox.mdx";
+---
+
+<html>
+  <div class="mission-text blurb blue-fill">
+    <BlueBox />
+  </div>
+
+  <style>
+    .blue-fill {
+      background-color: var(--aces-blue);
+      color: #fff;
+    }
+    .mission-text {
+      text-align: center;
+      padding: 2rem 0;
+      margin: 2rem 5%;
+      border-radius: 40px;
+    }
+    .blurb {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 64em) {
+      .mission-text {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 35em) {
+      .mission-text {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+
+
+</html>
