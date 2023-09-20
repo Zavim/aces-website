@@ -16,9 +16,6 @@ pnpm-debug.log*
 .env
 .env.production
 
-# macOS-specific files
-.DS_Store
-
 public/*.doc
 public/.~lock*
-notes.txt
+notes.md

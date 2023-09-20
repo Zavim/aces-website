@@ -113,10 +113,10 @@ export default function MoreInfo() {
             </div>
             <div className="info-button-container outline">
               <span>
-                Download Packet <br className="new-tab-linebreak" /> (opens new
-                tab)
+                Register
+                <br className="new-tab-linebreak" /> (opens new tab)
               </span>
-              <a href="/SOI2023.pdf">
+              <a href="/SOI2024.pdf" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="info-icon download-button"

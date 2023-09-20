@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { Content as PhotoText } from "../components/about.mdx";
 
-// import LaxAnimController from "../components/LaxAnimController";
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
@@ -12,8 +10,6 @@ import BlueBoxLayout from "../layouts/BlueBoxLayout.astro";
 import AboutACESLayout from "../layouts/AboutACESLayout.astro";
 import MotivatedLayout from "../layouts/MotivatedLayout.astro";
 
-import paddleBoarding from "../images/paddleBoarding.jpg";
-import mouseAndCat from "../images/mouseAndCat1200.jpg";
 import robots from "../images/robots1200.jpg";
 import serving from "../images/serving1200.jpg";
 import group from "../images/group1600.jpg";
@@ -25,40 +21,14 @@ import strength from "../images/tensileStrength.jpg";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/images/favicon.svg" />
+    <title>ACES Lorain County</title>
   </head>
-  <!-- <LaxAnimController client:load /> -->
   <Navbar />
   <main>
     <Slideshow />
     <BlueBoxLayout />
     <AboutACESLayout />
-    <!-- <div class="photo-text-container">
-      <div class="text-card">
-        <PhotoText />
-        <h2>About the ACES Program</h2>
-        <p>
-          Students will complete group and individual challenges, learning to
-          control emotions and behaviors that could ultimately hinder their
-          academic and social progress. <br />
-
-          <br /> They are taught how to implement this new-found control to
-          reach short/long term goals via hands-on, goal oriented, role playing,
-          critical thinking scenarios and community service.
-          <br />
-
-          <br /> The ACES program empowers students to experiment and adopt
-          behaviors that generate positive results.
-        </p>
-      </div>
-      <div class="photo-card-container">
-        <Image
-          src={paddleBoarding}
-          alt="students paddleboarding on a lake as the sun sets"
-          class="photo-card-img"
-        />
-      </div>
-    </div> -->
 
     <div class="rewards-container">
       <RewardsCard client:visible>
@@ -163,33 +133,7 @@ import strength from "../images/tensileStrength.jpg";
         </p>
       </RewardsCard>
     </div>
-
-    <div class="signup-photo-text-container">
-      <div class="signup-photo-card-container">
-        <Image
-          class="photo-card-img"
-          src={mouseAndCat}
-          alt="children in front of two people costumed, one as a cat and the other, a mouse"
-        />
-      </div>
-      <div class="motivated-text blurb blue-fill">
-        <div>
-          <MotivatedLayout />
-          <!-- <h2 class="motivated-header">ACES Students Are Motivated To...</h2>
-          <ul class="rewards-list">
-            <li>Improve/maintain academic performance</li>
-            <li>Attend school regularly</li>
-            <li>Participate in after-school tutoring</li>
-            <li>
-              Avoid behaviors that lead to negative referrals <br /> and
-              suspensions
-            </li>
-            <li>Contemplate a more positive future</li>
-          </ul> -->
-        </div>
-        <button class="signup">Sign Up!</button>
-      </div>
-    </div>
+    <MotivatedLayout />
 
     <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -301,9 +245,6 @@ import strength from "../images/tensileStrength.jpg";
       height: 525px;
     }
     .photo-text-container > * {
-      border-radius: 40px;
-    }
-    .signup-photo-text-container > * {
       border-radius: 40px;
     }
     .text-card {
@@ -463,27 +404,13 @@ import strength from "../images/tensileStrength.jpg";
       padding: 0 1rem;
       text-align: center;
     }
-    .signup-photo-text-container {
-      display: flex;
-      margin: 3rem 7.5% 5rem;
-      justify-content: space-around;
-      /* background-color: var(--aces-blue); */
-      height: fit-content;
-    }
-    .signup-photo-card-container {
-      flex: 0.25 0 25%;
-      overflow: hidden;
-      box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1);
-      margin-right: 1rem;
-      /* background-position: center;
-      background-size: cover; */
-    }
     .signup {
       /* position: relative;
       right: -100%; */
       border: none;
       border-radius: 40px;
       color: #fff;
+      text-decoration: none;
       /* background-color: var(--aces-blue); */
       background-color: var(--aces-blue-dark);
       padding: 1rem 2rem;
@@ -494,6 +421,7 @@ import strength from "../images/tensileStrength.jpg";
       background-color: var(--aces-blue-very-dark);
       transform: translateY(5px);
       box-shadow: none;
+      color: #fff;
       transition: 0.1s transform ease-out;
     }
 
@@ -544,15 +472,6 @@ import strength from "../images/tensileStrength.jpg";
       .spinning-star-right {
         scale: 15;
         bottom: -170%;
-      }
-      .signup-photo-text-container {
-        margin: 0 5% 3rem;
-        flex-direction: column;
-        height: 55rem;
-      }
-      .signup-photo-card-container {
-        margin: 0 0 2rem;
-        flex: 0 0 40%;
       }
       .rewards-list {
         padding-bottom: 1rem;
@@ -621,13 +540,6 @@ import strength from "../images/tensileStrength.jpg";
       .spinning-star-right {
         scale: 10;
         bottom: -300%;
-      }
-      .signup-photo-text-container {
-        flex-direction: column;
-        height: auto;
-      }
-      .signup-photo-card-container {
-        margin: 0 0 3rem;
       }
       .motivated-text {
         padding: 1.5rem;

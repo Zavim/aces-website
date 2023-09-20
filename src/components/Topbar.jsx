@@ -14,7 +14,7 @@ export default function Topbar(props) {
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="About" id="basic-nav-dropdown">
               <NavDropdown.Item href="/about#soi">Activities</NavDropdown.Item>
-              <NavDropdown.Item href="/about#team">Our Team</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/about#team">Our Team</NavDropdown.Item> */}
             </NavDropdown>
             <NavDropdown title="Media" id="basic-nav-dropdown">
               <NavDropdown.Item href="/media#videos">Videos</NavDropdown.Item>

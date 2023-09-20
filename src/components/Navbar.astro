@@ -5,13 +5,13 @@ import Topbar from "../components/Topbar.jsx";
 import acesLogo from "../images/ACES-logo-transparent-no-words.png";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <Topbar client:load>
   <Image
-  src={acesLogo}
-  alt="ACES logo (the word aces spelled out with a star as the letter A)"
-  class="navbar-logo"
-  slot="logo"
+    src={acesLogo}
+    alt="ACES logo (the word aces spelled out with a star as the letter A)"
+    class="navbar-logo"
+    slot="logo"
   />
 </Topbar>
 <style is:global>
@@ -45,6 +45,10 @@ import acesLogo from "../images/ACES-logo-transparent-no-words.png";
   }
   .navbar-nav > * {
     margin: 0 0.5rem;
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .show > .nav-link {
+    text-align: right;
   }
   .dropdown-menu {
     text-align: inherit;
