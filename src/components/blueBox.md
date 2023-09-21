@@ -1,6 +1,3 @@
----
----
-
 ## Achievement through Community Education & Support (ACES)<br/><br/>
 
 We are a fun-focused high school mentoring program.<br/><br/>

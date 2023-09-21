@@ -1,7 +1,4 @@
----
----
-
-## About the ACES Program<br/><br/>
+## About the ACES Program<br/>
 
 Students will complete group and individual challenges, learning to
 control emotions and behaviors that could ultimately hinder their

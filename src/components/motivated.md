@@ -1,6 +1,3 @@
----
----
-
 ## ACES Students Are Motivated To...
 
 - Improve/maintain academic performance
