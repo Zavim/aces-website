@@ -1,0 +1,44 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+const { blok } = Astro.props;
+const title = renderRichText(blok.title);
+const content = renderRichText(blok.content);
+---
+
+<div class="mission-text blurb blue-fill" {...storyblokEditable(blok)}>
+  <Fragment class="mission-heading" set:html={title} />
+  <Fragment set:html={content} />
+</div>
+
+<style>
+  .blue-fill {
+    background-color: var(--aces-blue);
+    color: #fff;
+  }
+  .mission-text {
+    text-align: center;
+    padding: 2rem 0;
+    margin: 2rem 5%;
+    border-radius: 40px;
+  }
+  .blurb {
+    font-size: 1.25rem;
+  }
+  .mission-heading {
+    padding-bottom: 1rem;
+  }
+
+  @media (max-width: 64em) {
+    .mission-text {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 35em) {
+    .mission-text {
+      text-align: left;
+      font-size: 1.2rem;
+      padding: 1.5rem;
+    }
+  }
+</style>

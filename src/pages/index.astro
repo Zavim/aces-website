@@ -1,12 +1,14 @@
 ---
 import { Image } from "astro:assets";
+import { useStoryblokApi } from "@storyblok/astro";
 
 import Navbar from "../components/Navbar.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Footer from "../components/Footer.astro";
 import RewardsCard from "../components/RewardsCard.jsx";
 
-import BlueBoxLayout from "../layouts/BlueBoxLayout.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+// import BlueBoxLayout from "../layouts/BlueBoxLayout.astro";
 import AboutACESLayout from "../layouts/AboutACESLayout.astro";
 import MotivatedLayout from "../layouts/MotivatedLayout.astro";
 
@@ -14,6 +16,12 @@ import robots from "../images/robots1200.jpg";
 import serving from "../images/serving1200.jpg";
 import group from "../images/group1600.jpg";
 import strength from "../images/tensileStrength.jpg";
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/home", {
+  version: import.meta.env.DEV ? "draft" : "published",
+});
+const content = data.story.content;
 ---
 
 <!doctype html>
@@ -27,7 +35,8 @@ import strength from "../images/tensileStrength.jpg";
   <Navbar />
   <main>
     <Slideshow />
-    <BlueBoxLayout />
+    <StoryblokComponent blok={content} />
+    <!-- <BlueBoxLayout /> -->
     <AboutACESLayout />
 
     <div class="rewards-container">
