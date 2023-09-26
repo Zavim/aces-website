@@ -15,7 +15,7 @@ export default defineConfig({
     }),
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,
-      bridge: true,
+      // bridge: true,
       apiOptions: {
         region: "us",
       },
@@ -23,10 +23,10 @@ export default defineConfig({
         page: "storyblok/Page",
         blueBox: "storyblok/BlueBox",
       },
-      componentsDir: "src",
-      enableFallbackComponent: false,
-      customFallbackComponent: "",
-      useCustomApi: false,
+      // componentsDir: "src",
+      // enableFallbackComponent: false,
+      // customFallbackComponent: "",
+      // useCustomApi: false,
     }),
   ],
   vite: {
