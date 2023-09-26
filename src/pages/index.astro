@@ -17,11 +17,11 @@ import serving from "../images/serving1200.jpg";
 import group from "../images/group1600.jpg";
 import strength from "../images/tensileStrength.jpg";
 
-const storyblokApi = useStoryblokApi();
-const { data } = await storyblokApi.get("cdn/stories/home", {
-  version: import.meta.env.DEV ? "draft" : "published",
-});
-const content = data.story.content;
+// const storyblokApi = useStoryblokApi();
+// const { data } = await storyblokApi.get("cdn/stories/home", {
+//   version: import.meta.env.DEV ? "draft" : "published",
+// });
+// const content = data.story.content;
 ---
 
 <!doctype html>
@@ -35,7 +35,7 @@ const content = data.story.content;
   <Navbar />
   <main>
     <Slideshow />
-    <StoryblokComponent blok={content} />
+    <!-- <StoryblokComponent blok={content} /> -->
     <!-- <BlueBoxLayout /> -->
     <AboutACESLayout />
 
