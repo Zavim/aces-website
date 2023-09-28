@@ -23,8 +23,8 @@ export default function Topbar(props) {
                 Newspaper
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">Donate</Nav.Link>
-            <Nav.Link href="#">Sign Up!</Nav.Link>
+            <Nav.Link href="/#donation">Donate</Nav.Link>
+            <Nav.Link href="/ACESPacket.pdf">Sign Up!</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
