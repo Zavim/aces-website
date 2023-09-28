@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function MoreInfo() {
+  const today = new Date();
   const [open, setOpen] = useState(false);
 
   const toggle = (open) => {
@@ -32,7 +33,9 @@ export default function MoreInfo() {
             11:00am - 3:00pm, Mon - Thurs <br /> (kids can be dropped off
             starting at 10:30am).
           </p>
-          <strong>This program runs from June 19 – August 10, 2023</strong>
+          <strong>
+            This program runs from June 19 – August 10, {today.getFullYear()}
+          </strong>
           <div className="info-button-container outline">
             <span>More Information</span>
 

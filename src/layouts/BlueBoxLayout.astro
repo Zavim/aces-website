@@ -5,9 +5,12 @@ import { Content as BlueBox } from "../components/blueBox.md";
 <html>
   <div class="mission-text blurb blue-fill">
     <BlueBox />
+    <p style="padding-top: 1rem;">
+      <strong>Our program runs year round.</strong>
+    </p>
   </div>
 
-  <style>
+  <style is:global>
     .blue-fill {
       background-color: var(--aces-blue);
       color: #fff;
@@ -20,6 +23,9 @@ import { Content as BlueBox } from "../components/blueBox.md";
     }
     .blurb {
       font-size: 1.25rem;
+    }
+    h2 {
+      padding-bottom: 1rem;
     }
 
     @media (max-width: 64em) {
