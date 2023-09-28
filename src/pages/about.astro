@@ -4,10 +4,10 @@ import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
-import jennifer from "/jennifer.png";
-import jessicka from "/jessicka.png";
-import lashane from "/lashane.png";
-import michael from "/michael.png";
+import jennifer from "../images/jennifer.png";
+import jessicka from "../images/jessicka.png";
+import lashane from "../images/lashane.png";
+import michael from "../images/michael.png";
 import pool from "../images/pool.jpg";
 import group from "../images/soiGroup.jpg";
 import palace from "../images/soiPalace.jpg";
@@ -61,39 +61,39 @@ import MoreInfo from "../components/MoreInfo";
         />
       </div>
     </div>
-    <!-- <div class="team-container" id="team">
+    <div class="team-container" id="team">
       <h2 class="heading text-center">Meet the ACES Team</h2>
       <div class="team-cards-container">
         <div class="member-card">
-          <img class="member-img" src={michael} alt="" />
+          <Image class="member-img" src={michael} alt="" />
           <div class="member-nametag">
-            <h4>Michael Ferrer</h4>
+            <h5>Michael Ferrer</h5>
             <span>Director</span>
           </div>
         </div>
         <div class="member-card">
-          <img class="member-img" src={jessicka} alt="" />
+          <Image class="member-img" src={jessicka} alt="" />
           <div class="member-nametag">
-            <h4>Jessicka Castro</h4>
+            <h5>Jessicka Castro (RN)</h5>
             <span>Associate Director <br /> Lead Facilitator</span>
           </div>
         </div>
         <div class="member-card">
-          <img class="member-img" src={jennifer} alt="" />
+          <Image class="member-img" src={jennifer} alt="" />
           <div class="member-nametag">
-            <h4>Jennifer Sanabria</h4>
+            <h5>Jennifer Sanabria</h5>
             <span>Mentor <br /> Facilitator</span>
           </div>
         </div>
         <div class="member-card">
-          <img class="member-img" src={lashane} alt="" />
+          <Image class="member-img" src={lashane} alt="" />
           <div class="member-nametag">
-            <h4>Lashane Hughley</h4>
+            <h5>Lashane Hughley</h5>
             <span>Mentor <br /> Facilitator</span>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </main>
   <Footer />
   <style is:global>
@@ -264,7 +264,7 @@ import MoreInfo from "../components/MoreInfo";
       padding-left: 1rem;
     }
     .team-container {
-      margin: 2rem auto 4rem;
+      margin: 2rem auto 3rem;
       max-width: 90rem;
     }
     .team-cards-container {
@@ -274,22 +274,29 @@ import MoreInfo from "../components/MoreInfo";
       margin: 0 1rem;
     }
     .member-card {
+      display: flex;
+      flex-direction: column;
       flex: 0 1 22%;
       width: 310px;
-      /* min-height: 445px; */
+      max-height: 445px;
       border: 2px solid var(--aces-blue-light);
       border-radius: 40px;
       overflow: hidden;
       background-color: #fff;
     }
     .member-img {
+      object-fit: cover;
       width: 100%;
+      height: 100%;
+      /* position: relative;
+      top: 0; */
       /* margin-bottom: 1.5rem; */
       /* box-shadow: 5px 20px 15px hsla(0, 0%, 0%, 0.1); */
     }
     .member-nametag {
       text-align: center;
       padding: 7% 5%;
+      height: 43%;
     }
     span {
       font-size: 1.2rem;
@@ -329,7 +336,7 @@ import MoreInfo from "../components/MoreInfo";
       }
     }
 
-    /* @media (max-width: 64em) {
+    @media (max-width: 64em) {
       .photo-text-container {
         height: auto;
       }
@@ -345,7 +352,7 @@ import MoreInfo from "../components/MoreInfo";
       span {
         font-size: 1rem;
       }
-    } */
+    }
 
     @media (max-width: 64em) {
       .mission-text {
@@ -361,7 +368,7 @@ import MoreInfo from "../components/MoreInfo";
         margin: 0;
       }
       .photo-card-container {
-        margin: 2rem 0;
+        /* margin: 2rem 0; */
         flex: 0 0 40%;
       }
       .rewards-container {
@@ -405,6 +412,7 @@ import MoreInfo from "../components/MoreInfo";
       .team-cards-container {
         flex-wrap: nowrap;
         align-items: center;
+        flex-direction: column;
       }
       .awards-container {
         padding: 0 5% 2rem;
