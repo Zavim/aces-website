@@ -2,15 +2,26 @@
 import { Image } from "astro:assets";
 
 import acesLogoWords from "../images/ACES-logo-transparent.png";
+import fb from "../images/fb.png";
 ---
 
 <footer>
   <div class="logo-container">
     <Image
-    src={acesLogoWords}
-    alt="ACES -- achievement through community education and support"
-    class="logo"
+      src={acesLogoWords}
+      alt="ACES -- achievement through community education and support"
+      class="logo"
     />
+    <div class="contact-container">
+      <a href="tel:440-654-8018"><strong> 440-654-8018</strong></a>
+      <a href="mailto:mf777df@msn.com"><strong>Email Us</strong></a>
+      <a
+        href="https://www.facebook.com/groups/3624543660956415"
+        target="_blank"
+      >
+        <Image src={fb} alt="facebook logo" class="fb-logo" />
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -19,15 +30,32 @@ import acesLogoWords from "../images/ACES-logo-transparent.png";
     background-color: var(--aces-blue-dark);
     min-height: max-content;
   }
+  strong,
+  a {
+    color: #fff;
+  }
+  a {
+    padding: 0 0.75rem;
+  }
   .logo-container {
     padding: 1rem 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   .logo {
     margin: 0.5rem 2rem;
     width: 25%;
+    height: auto;
+  }
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .fb-logo {
+    width: 2rem;
     height: auto;
   }
   @media (max-width: 35em) {
