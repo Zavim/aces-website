@@ -19,3 +19,4 @@ pnpm-debug.log*
 public/*.doc
 public/.~lock*
 notes.md
+dist.zip
