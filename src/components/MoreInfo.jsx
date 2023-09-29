@@ -36,35 +36,42 @@ export default function MoreInfo() {
           <strong>
             This program runs from June 19 – August 10, {today.getFullYear()}
           </strong>
-          <div className="info-button-container outline">
-            <span>More Information</span>
+          <div className="flex">
+            <div className="info-button-container outline">
+              <span>View Flyer</span>
+              <a href="/SOICover24.pdf" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="info-icon download-button"
+                  height="48"
+                  viewBox="0 96 960 960"
+                  width="48"
+                >
+                  <path d="M280 776h400v-60H280v60Zm197-126 158-157-42-42-85 84V336h-60v199l-85-84-42 42 156 157Zm3 326q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z" />
+                </svg>
+              </a>{" "}
+            </div>
+            <div className="info-button-container outline">
+              <span>More Information</span>
 
-            <button
-              className="info-button"
-              onClick={() => {
-                toggle(open);
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="info-icon"
-                height="48"
-                style={{ transform: "rotate(180deg)" }}
-                viewBox="0 96 960 960"
-                width="48"
+              <button
+                className="info-button"
+                onClick={() => {
+                  toggle(open);
+                }}
               >
-                <path d="m480 722 42-42-74-74h182v-60H448l74-74-42-42-146 146 146 146Zm0 254q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z" />
-              </svg>
-              {/* <svg
-                className="info-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                height="48"
-                viewBox="0 96 960 960"
-                width="48"
-              >
-                <path d="m480 690 146-147H333l147 147Zm0 286q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z"></path>
-              </svg> */}
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="info-icon"
+                  height="48"
+                  style={{ transform: "rotate(180deg)" }}
+                  viewBox="0 96 960 960"
+                  width="48"
+                >
+                  <path d="m480 722 42-42-74-74h182v-60H448l74-74-42-42-146 146 146 146Zm0 254q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       ) : (
@@ -96,6 +103,23 @@ export default function MoreInfo() {
 
           <div className="flex">
             <div className="info-button-container outline">
+              <span>
+                Register
+                <br className="new-tab-linebreak" /> (opens new tab)
+              </span>
+              <a href="/SOI2024.pdf" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="info-icon download-button"
+                  height="48"
+                  viewBox="0 96 960 960"
+                  width="48"
+                >
+                  <path d="M280 776h400v-60H280v60Zm197-126 158-157-42-42-85 84V336h-60v199l-85-84-42 42 156 157Zm3 326q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z" />
+                </svg>
+              </a>
+            </div>
+            <div className="info-button-container outline">
               <span>Go Back</span>
               <button
                 className="info-button"
@@ -113,23 +137,6 @@ export default function MoreInfo() {
                   <path d="m480 722 42-42-74-74h182v-60H448l74-74-42-42-146 146 146 146Zm0 254q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z" />
                 </svg>
               </button>
-            </div>
-            <div className="info-button-container outline">
-              <span>
-                Register
-                <br className="new-tab-linebreak" /> (opens new tab)
-              </span>
-              <a href="/SOI2024.pdf" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="info-icon download-button"
-                  height="48"
-                  viewBox="0 96 960 960"
-                  width="48"
-                >
-                  <path d="M280 776h400v-60H280v60Zm197-126 158-157-42-42-85 84V336h-60v199l-85-84-42 42 156 157Zm3 326q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
