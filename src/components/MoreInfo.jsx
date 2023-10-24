@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function MoreInfo() {
-  const today = new Date();
   const [open, setOpen] = useState(false);
 
   const toggle = (open) => {
@@ -33,9 +32,7 @@ export default function MoreInfo() {
             11:00am - 3:00pm, Mon - Thurs <br /> (kids can be dropped off
             starting at 10:30am).
           </p>
-          <strong>
-            This program runs from June 19 – August 10, {today.getFullYear()}
-          </strong>
+          <strong>This program runs from June 17 – August 8, 2024</strong>
           <div className="flex">
             <div className="info-button-container outline">
               <span>View Flyer</span>
@@ -80,14 +77,18 @@ export default function MoreInfo() {
             It is important that you only mark the weekly camps that your child
             <strong> WILL ATTEND.</strong> If you sign up for a given week and
             your child cannot attend that week{" "}
-            <a href="tel:440-654-8018">you must call us</a> or we will assume
-            your child is out for the remainder of the summer.{" "}
+            <strong>
+              you must call us at <a href="tel:440-654-8018">440-654-8018</a>
+            </strong>{" "}
+            or we will assume your child is out for the remainder of the summer.{" "}
           </p>
           <p>
             <a href="tel:440-336-1501"> Please call Mike Ferrer</a> if you have
-            questions about our safety measures. We intend to continue masking
-            while indoors, social distancing, engage in extensive hand washing,
-            cleaning and disinfection of the facility on a daily basis.
+            questions about our safety measures. We intend to continue taking
+            safety precautions wherever appropriate. These measures could
+            include masking while indoors, social distancing and engaging in
+            extensive hand washing, among others. ACES will continue to clean
+            and disinfect the facility on a daily basis.
           </p>
           <span>
             Parents are responsible for transportation to and from the program
@@ -96,9 +97,16 @@ export default function MoreInfo() {
           </span>
           <span>
             <em>
-              Lunch and snacks will be provided daily at no cost to students or
+              *Lunch and snacks will be provided daily at no cost to students or
               parents.
             </em>
+          </span>
+          <br />
+          <span style={{ paddingTop: "2rem" }}>
+            <strong>
+              Completed packets can be dropped off at 559 Reid Avenue <br />{" "}
+              (mail slot), or to staff on site.
+            </strong>
           </span>
 
           <div className="flex">

@@ -24,7 +24,9 @@ export default function Topbar(props) {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/#donation">Donate</Nav.Link>
-            <Nav.Link href="/ACESPacket.pdf">Sign Up!</Nav.Link>
+            <Nav.Link href="/ACESPacket.pdf" target="_blank">
+              Sign Up!
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,9 +1,5 @@
 ## Achievement through Community Education & Support (ACES)
 
-We are a fun-focused high school mentoring program.
+We are a fun-focused student mentoring program helping 8th – 12th graders within Lorain County to navigate challenges and barriers detrimental to their academic, social, emotional, and career growth.
 
-We help 9th-12th grade Lorain High School/Success Academy students
-accept and successfully navigate a series of challenges.
-
-The students develop inherent skills to overcome barriers hindering
-educational, social, emotional and career growth.
+Students are supported as needed during, after school, evenings and on weekends. ACES also manages a chat room ensuring we are always available to students.
