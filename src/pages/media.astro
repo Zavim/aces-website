@@ -39,7 +39,7 @@ import team from "../images/team.jpeg";
     </div>
     <div class="showcase-container">
       <div class="heading-container">
-        <h2 class="heading text-center" id="videos">Texting and Driving PSA</h2>
+        <h2 class="heading text-center" id="videos">Texting & Driving PSA</h2>
       </div>
       <section class="showcase">
         <iframe
@@ -124,24 +124,24 @@ import team from "../images/team.jpeg";
 
     <h2 class="heading text-center" id="newspaper">Newspaper</h2>
 
-    <div class="flex" style="justify-content:center; margin:2rem 5% 5rem">
-      <div class="info-button-container outline">
-        <span> Download Article (opens new tab)</span>
-        <a href="/ACESarticle.pdf" target="_blank">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="info-icon download-button"
-            height="48"
-            viewBox="0 96 960 960"
-            width="48"
-          >
-            <path
-              d="M280 776h400v-60H280v60Zm197-126 158-157-42-42-85 84V336h-60v199l-85-84-42 42 156 157Zm3 326q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z"
-            ></path>
-          </svg>
-        </a>
-      </div>
+    <!-- <div class="flex" style="justify-content:center; margin:2rem 5% 5rem"> -->
+    <div class="info-button-container outline">
+      <span>View Article (opens new tab)</span>
+      <a href="/ACESarticle.pdf" target="_blank">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="info-icon download-button"
+          height="48"
+          viewBox="0 96 960 960"
+          width="48"
+        >
+          <path
+            d="M280 776h400v-60H280v60Zm197-126 158-157-42-42-85 84V336h-60v199l-85-84-42 42 156 157Zm3 326q-82 0-155-31.5t-127.5-86Q143 804 111.5 731T80 576q0-83 31.5-156t86-127Q252 239 325 207.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576q0 82-31.5 155T763 858.5q-54 54.5-127 86T480 976Z"
+          ></path>
+        </svg>
+      </a>
     </div>
+    <!-- </div> -->
   </main>
   <Footer />
   <style is:global>
@@ -297,10 +297,13 @@ import team from "../images/team.jpeg";
       margin: 0 5% 5rem;
     }
     .info-button-container {
-      /* width: 20%; */
+      max-width: 300px;
       /* margin-top: 2rem; */
-      /* display: flex; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 0.8rem;
+      margin: 2rem auto 5rem;
       /* position: fixed; */
       border-radius: 40px;
       /* margin-left: 50%; */
